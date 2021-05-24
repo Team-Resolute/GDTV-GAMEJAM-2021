@@ -19,6 +19,7 @@
       <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FocusPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSpawn.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -68,6 +69,7 @@
       <workItem from="1621805513795" duration="5830000" />
       <workItem from="1621812570757" duration="5393000" />
       <workItem from="1621829666187" duration="2610000" />
+      <workItem from="1621833017179" duration="153000" />
     </task>
     <servers />
   </component>

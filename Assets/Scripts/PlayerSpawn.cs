@@ -11,7 +11,7 @@ public class PlayerSpawn : MonoBehaviour
     IEnumerator Spawn()
     {
         int partSpawnCount = Random.Range(1, 6); 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         while (particles.particleCount < 250){
             if (Input.GetKey(KeyCode.A))
             {
@@ -19,7 +19,7 @@ public class PlayerSpawn : MonoBehaviour
             }
             particles.Emit(partSpawnCount);
             partSpawnCount = Random.Range(1, 6);
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.0125f);
         }
         GameObject player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         while (particles.particleCount < 250){
@@ -29,9 +29,9 @@ public class PlayerSpawn : MonoBehaviour
             }
             particles.Emit(partSpawnCount);
             partSpawnCount = Random.Range(1, 6);
-            yield return new WaitForSeconds(0.025f);
+            yield return new WaitForSeconds(0.125f);
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         player.GetComponent<PlayerMovement>().enabled = true;
     }
 
