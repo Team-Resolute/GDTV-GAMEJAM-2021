@@ -7,7 +7,7 @@ public class FocusPoint : MonoBehaviour
     private Transform player = default;
     [SerializeField] private Transform playerSpawnPoint = default;
     private const string PlayerTag = "Player";
-    private const float MaxDistanceToPlayer = 1.5f;
+    private const float MaxDistanceToPlayer = 0.2f;
     private const float FollowSpeed = 100f;
     
     void Update()

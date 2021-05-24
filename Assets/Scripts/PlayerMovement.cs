@@ -6,8 +6,13 @@ using UnityEngine.Windows.WebCam;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private enum Facing {None, Right, Left}
+    private Facing facing = Facing.Right;
+
     private Vector3 inputVector;
     private Vector3 moveVector;
+    private bool facingRight = true;
+    private bool jumping = false;
     private bool jumpCommand = false;
     
     private float acceleration = 1f;
@@ -16,14 +21,14 @@ public class PlayerMovement : MonoBehaviour
 
     private float inputThreshold = 0.1f;
     [SerializeField] private LayerMask groundLayers;
-    private Rigidbody rigidbody = default;
+    private Rigidbody body = default;
 
     [SerializeField] private Transform model;
-    
+    [SerializeField] private Transform center;
     void Start()
     {
         //groundLayers = ~groundLayers;
-        rigidbody = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -40,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 rot = transform.rotation.eulerAngles;
         rot.z = 0;
         transform.rotation = Quaternion.Euler(rot);
+        transform.position = new Vector3(transform.position.x,
+            transform.position.y,
+            0f);
     }
 
     private void FixedUpdate()
@@ -54,7 +62,9 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = Mathf.Clamp(currentSpeed + acceleration, 0f, maxSpeed);
             
             moveVector.x = transform.right.x * (inputVector.x * currentSpeed * Time.deltaTime);
-            rigidbody.MovePosition(transform.position + moveVector);
+            body.MovePosition(transform.position + moveVector);
+            if (moveVector.x > 0) { facing = Facing.Right;}
+            if (moveVector.x < 0) { facing = Facing.Left;}
             model.transform.right = Vector3.right * Mathf.Sign(inputVector.x);
         }
         else
@@ -70,10 +80,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void CollectInput()
     {
-        if (GroundCheck()==false) { return;}
         inputVector.x = Input.GetAxis("Horizontal");
         inputVector.y = Input.GetAxis("Vertical");
-        if (inputVector.y > 0.5f || Input.GetButton("Jump"))
+
+        if (facing == Facing.Right && !GroundCheck())
+        {
+            inputVector.x = Mathf.Min(inputVector.x, 0f);
+        }
+        else if (facing == Facing.Left && !GroundCheck())
+        {
+            inputVector.x = Mathf.Max(0, inputVector.x);
+        }
+
+        if (!jumping && (inputVector.y > 0.5f || Input.GetButton("Jump")))
         {
             jumpCommand = true;
         }
@@ -81,13 +100,15 @@ public class PlayerMovement : MonoBehaviour
 
     private bool GroundCheck()
     {
-        RaycastHit hitInfo;
-        bool hit = Physics.Raycast(transform.position, Vector3.down, out hitInfo, 3f, groundLayers);
-        if (hit) {Debug.Log(hitInfo.collider.name);}
+        Vector3 dir = Vector3.down + (Vector3.right * Mathf.Sign(inputVector.x));
+        bool hit = Physics.Raycast(center.position, dir, 3f, groundLayers);
+        if (!hit)
+        {
+            dir = Vector3.down + (Vector3.right * Mathf.Sign(-inputVector.x));
+            hit = Physics.Raycast(center.position, dir, 3f, groundLayers);
+        }
 
-        
-        //TODO: Fix ground checks
-        return true;
+        return hit;
     }
 
     public void Teleport(Vector3 pos)
