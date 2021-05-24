@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private float maxSpeed = 20f;
     private float currentSpeed = 0f;
 
+    // Jumpimg
+    [SerializeField] private float verticalSpeed = 2f;
+
     private float inputThreshold = 0.1f;
     [SerializeField] private LayerMask groundLayers;
     private Rigidbody body = default;
@@ -53,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MoveHorizontally();
+        Jump();
     }
 
     void MoveHorizontally()
@@ -76,6 +80,14 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         //TODO: Add jump functionality
+        // Implementation is only partial: we should have a jumping state to 1 and we should detect landing to put it back to 0
+        // Furthermore it does not allow horizontal movement at the same time
+        if(jumpCommand == true && GroundCheck() == true)
+        {
+            body.velocity += Vector3.up * verticalSpeed;
+            jumpCommand = false;
+        }
+
     }
 
     private void CollectInput()
