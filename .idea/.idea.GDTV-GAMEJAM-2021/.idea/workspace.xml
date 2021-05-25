@@ -28,6 +28,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/FocusPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSpawn.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Flicker.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -79,6 +80,7 @@
       <workItem from="1621829666187" duration="2610000" />
       <workItem from="1621833017179" duration="153000" />
       <workItem from="1621913999164" duration="10527000" />
+      <workItem from="1621928588842" duration="1799000" />
     </task>
     <servers />
   </component>
