@@ -13,7 +13,8 @@ public class FakeChest : MonoBehaviour
       Debug.Log("You grabbed the chest!");
       if (other.gameObject.CompareTag("Player") && !lethal)
       {
-         PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
+         // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
+         PlayerController movement = other.gameObject.GetComponent<PlayerController>();
          if (movement)
          {
             movement.Teleport(teleportPoint.position);

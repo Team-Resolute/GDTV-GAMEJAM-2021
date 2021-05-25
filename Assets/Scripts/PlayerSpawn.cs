@@ -32,7 +32,8 @@ public class PlayerSpawn : MonoBehaviour
             yield return new WaitForSeconds(0.125f);
         }
         yield return new WaitForSeconds(0.25f);
-        player.GetComponent<PlayerMovement>().enabled = true;
+        // player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerController>().enabled = true;
     }
 
     

@@ -10,10 +10,11 @@ public class Fall : MonoBehaviour
    
    private void OnTriggerEnter(Collider other)
    {
-      Debug.Log("Soemthing fell!");
+      Debug.Log("Something fell!");
       if (other.gameObject.CompareTag("Player") && !lethal)
       {
-         PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
+         // PlayerMovement movement = other.gameObject.GetComponent<PlayerMovement>();
+         PlayerController movement = other.gameObject.GetComponent<PlayerController>();
          if (movement)
          {
             movement.Teleport(teleportPoint.position);
