@@ -6,6 +6,7 @@ public class PlayerSpawn : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particles = default;
     [SerializeField] private GameObject playerPrefab = default;
+    [SerializeField] private Sleepometer sleepometer;
     private Coroutine spawningCoroutine = default; 
     
     IEnumerator Spawn()
@@ -34,6 +35,7 @@ public class PlayerSpawn : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         // player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<PlayerController>().enabled = true;
+        sleepometer.StartTimer();
     }
 
     
