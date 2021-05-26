@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(body.velocity);
+        //Debug.Log(body.velocity);
         
         //Update the timer of how long the player have been on the air
         IncreaseVerticalVelocityTimer();
