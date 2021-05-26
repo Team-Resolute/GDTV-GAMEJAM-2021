@@ -30,6 +30,18 @@ Transform:
   m_Father: {fileID: 6062451345935508892}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6831045060497925359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4946799168469647014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9962df93c1338404187b18ee53b44c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5818169625191955911
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +118,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.28
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -212,8 +224,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: DozingDanny
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 28cd3620fc5fdda4b869008391d6bfd3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cf2975a626ab49042a3749f17a1b2376, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28cd3620fc5fdda4b869008391d6bfd3, type: 3}
+--- !u!1 &4946799168469647014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 28cd3620fc5fdda4b869008391d6bfd3, type: 3}
+  m_PrefabInstance: {fileID: 5217392077341033463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5759364016260834332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 28cd3620fc5fdda4b869008391d6bfd3, type: 3}
