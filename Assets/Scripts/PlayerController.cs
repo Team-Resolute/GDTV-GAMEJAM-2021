@@ -68,6 +68,8 @@ public class PlayerController : MonoBehaviour
         }
 
         // Character facing right or left
+
+        
         if(transform.rotation == Quaternion.Euler(0,0,0) && body.velocity.x < 0)
         {
             transform.rotation = Quaternion.Euler(0,180,0);
