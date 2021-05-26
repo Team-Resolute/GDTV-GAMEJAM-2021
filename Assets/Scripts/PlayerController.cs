@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isGrounded && verticalVelocitytimer > 1f)
             {
-                SoundManager.PlaySound(SoundManager.GetRandomSoundRange(4,6), transform.position);   
+                SoundManager.PlaySound(SoundManager.Sound.JumpImpact, transform.position);   
             }
             
             isGrounded = true;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             
-            SoundManager.PlaySound(SoundManager.GetRandomSoundRange(0,3), transform.position);
+            SoundManager.PlaySound(SoundManager.Sound.Jump, transform.position);
             body.velocity += new Vector3(0f, jumpForce, 0f);
         }
 

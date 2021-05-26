@@ -10,15 +10,8 @@ namespace Sound
     {
         public enum Sound
         {
-            Jump0,
-            Jump1,
-            Jump2,
-            Jump3,
-            ImpactJump4,
-            ImpactJump5,
-            ImpactJump6,
-            PlaceHolder4,
-            PlaceHolder5,
+            Jump,
+            JumpImpact,
         }
 
         private static Dictionary<Sound, float> soundTimerDictionary;
@@ -101,11 +94,11 @@ namespace Sound
         
         private static AudioClip GetAudioClip(Sound sound)
         {
-            foreach (var soundAudioClip in GameAssets.i.soundAudioClipArray)
+            foreach (var soundAudioClip in AudioAssets.i.soundBanks)
             {
                 if (soundAudioClip.sound == sound)
                 {
-                    return soundAudioClip.audioClip;
+                    return (AudioClip)soundAudioClip.audioClip.soundBank.GetValue(Random.Range(0,soundAudioClip.audioClip.soundBank.Length));
                 }
             }
             Debug.LogError("Sound" + sound + "not found!");
@@ -114,9 +107,9 @@ namespace Sound
 
         public static Sound GetRandomSoundRange(int x, int y)
         {
-            var values = Enum.GetValues(typeof(SoundManager.Sound));
+            var values = Enum.GetValues(typeof(Sound));
             int rand = Random.Range(x, y);
-            var randomSound = (SoundManager.Sound)values.GetValue(rand);
+            var randomSound = (Sound)values.GetValue(rand);
             return randomSound;
         }
     }
