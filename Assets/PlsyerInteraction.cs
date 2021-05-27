@@ -16,7 +16,7 @@ public class PlsyerInteraction : MonoBehaviour
 
     void Start()
     {
-        interactionLayer = ~interactionLayer;
+        //interactionLayer = ~interactionLayer;
         if (bar) {bar.gameObject.SetActive(false);}
     }
     void Update()
