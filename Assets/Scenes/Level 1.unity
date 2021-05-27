@@ -718,6 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: {fileID: 1597125573}
   playerPrefab: {fileID: 6062451345935508894, guid: 82aa8753a73b2e94193e87fe348eb6e3, type: 3}
+  sleepometer: {fileID: 0}
 --- !u!4 &643300241
 Transform:
   m_ObjectHideFlags: 0
@@ -6077,7 +6078,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6a61730357b70240a2b03534b129105, type: 2}
+  - {fileID: 4835078630258379571, guid: 28cd3620fc5fdda4b869008391d6bfd3, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
