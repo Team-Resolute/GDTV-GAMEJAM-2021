@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     private static Camera cam = default;
     private static Coroutine currentDialogueSequence = default;
     public static DialogueManager Instance { get; private set; }
+    private float dialogueDisplayTime = 2f;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -47,14 +49,14 @@ public class DialogueManager : MonoBehaviour
         currentDialogueSequence = StartCoroutine(nameof(ShowDialogue));
     }
 
-    private IEnumerator ShowDialogue(float dialogueDisplayTime = 2f)
+    private IEnumerator ShowDialogue()
     {
         for (int i = 0; i < dialogue.Count; i++)
         {
             Time.timeScale = 0f;
-            DialogueSnippet snippet = dialogue[i];
-            DialogueBox dialogueBox = DetermineDialogueBox(snippet);
-            dialogueBox.Show(snippet);
+            DialogueSnippet currentSnippet = dialogue[i];
+            DialogueBox dialogueBox = DetermineDialogueBox(currentSnippet);
+            dialogueBox.Show(currentSnippet);
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
             yield return new WaitForSecondsRealtime(dialogueDisplayTime);
             Time.timeScale = 1f;
@@ -70,8 +72,13 @@ public class DialogueManager : MonoBehaviour
         if (snippet.speaker == Speaker.Mother) { dialogueBox = motherDialogueBox; }
         if (snippet.speaker == Speaker.Sandman) { dialogueBox = sandmanDialogueBox; }
         if (snippet.speaker == Speaker.Player) { dialogueBox = playerDialogueBox; }
+
+        if (dialogueBox == null)
+        {
+            Debug.LogError("DialogueBox is null.");
+            Debug.Log("Currenty speaker is " + snippet.speaker);
+        }
         if (dialogueBox) { return dialogueBox; }
-        else
-        { return null; }
+        return null;
     }
 }

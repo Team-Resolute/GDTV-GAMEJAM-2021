@@ -37,9 +37,9 @@
       <option value="$PROJECT_DIR$/Assets/PlsyerInteraction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogueSnippet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogueBox.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSpawn.cs" />
       <option value="$PROJECT_DIR$/Assets/SpeechEventOnApproach.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -100,7 +100,7 @@
       <workItem from="1621928588842" duration="1799000" />
       <workItem from="1622003817814" duration="7634000" />
       <workItem from="1622090925290" duration="724000" />
-      <workItem from="1622319762537" duration="7970000" />
+      <workItem from="1622319762537" duration="9354000" />
     </task>
     <servers />
   </component>
