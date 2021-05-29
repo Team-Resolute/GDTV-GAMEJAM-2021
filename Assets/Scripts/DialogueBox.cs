@@ -46,7 +46,7 @@ public class DialogueBox : MonoBehaviour
         if (status == Status.Showing)
         {
             float alpha = frame.material.color.a;
-            alpha += (0.5f * Time.unscaledDeltaTime);
+            alpha += (1f * Time.unscaledDeltaTime);
             if (alpha >= 1f)
             {
                 alpha = 1f;
@@ -60,7 +60,7 @@ public class DialogueBox : MonoBehaviour
         if (status == Status.Hiding)
         {
             float alpha = frame.material.color.a;
-            alpha -= (0.5f * Time.unscaledDeltaTime);
+            alpha -= (1f * Time.unscaledDeltaTime);
             if (alpha <= 0f)
             {
                 alpha = 0f;

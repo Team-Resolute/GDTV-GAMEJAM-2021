@@ -14,10 +14,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueBox sandmanDialogueBox;
     [SerializeField] private DialogueBox motherDialogueBox;
 
-    private static Camera cam = default;
     private static Coroutine currentDialogueSequence = default;
     public static DialogueManager Instance { get; private set; }
-    private float dialogueDisplayTime = 2f;
+    private float dialogueDisplayTime = 1.5f;
     
     private void Awake()
     {
@@ -34,7 +33,6 @@ public class DialogueManager : MonoBehaviour
 
     public void NewDialogue()
     {
-        cam = Camera.main;
         dialogue.Clear();
     }
 
