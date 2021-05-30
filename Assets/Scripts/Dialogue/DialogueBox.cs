@@ -20,12 +20,18 @@ public class DialogueBox : MonoBehaviour
     private Status status = Status.Hidden;
     [SerializeField] private TextMeshProUGUI textbox;
     [SerializeField] private Image frame;
+    [SerializeField] private Image backboard;
+    [SerializeField] private Light backLight;
+    private int lightIntensity = 20000;
+    private int lightRange = 500;
     private bool operationDone = false;
 
+    private Camera cam;
     // Update is called once per frame
 
     void Start()
     {
+        cam = Camera.main;
         status = Status.Hidden;
         SetAlpha(0f);
     }
@@ -39,8 +45,26 @@ public class DialogueBox : MonoBehaviour
         color = textbox.color;
         color.a = alphaValue;
         textbox.color = color;
-    } 
+        if (backboard)
+        {
+            color = backboard.color;
+            color.a = Mathf.Clamp(alphaValue, 0f, 0.5f);
+            backboard.color = color;
+        }
+
+        if (backLight)
+        {
+            Vector3 pos = cam.ScreenToWorldPoint(frame.rectTransform.position);
+            pos = new Vector3( pos.x, pos.y, backLight.transform.position.z);
+            backLight.transform.position = pos;
+            backLight.intensity = (lightIntensity * alphaValue);
+            backLight.range = (lightRange * alphaValue);
+        }
+
+    }
+
     
+
     void Update()
     {
         if (status == Status.Showing)

@@ -10,10 +10,10 @@ using Debug = UnityEngine.Debug;
 public class DialogueManager : MonoBehaviour
 {
     private static List<DialogueSnippet> dialogue = new List<DialogueSnippet>();
-    [SerializeField] private DialogueBox playerDialogueBox;
-    [SerializeField] private DialogueBox sandmanDialogueBox;
-    [SerializeField] private DialogueBox motherDialogueBox;
-
+    [SerializeField] private DialogueBox playerDialogueBox = default;
+    [SerializeField] private DialogueBox sandmanDialogueBox = default;
+    [SerializeField] private DialogueBox motherDialogueBox = default;
+    [SerializeField] private Image defaultBackboard = default;
     private static Coroutine currentDialogueSequence = default;
     public static DialogueManager Instance { get; private set; }
     private float dialogueDisplayTime = 1.5f;
@@ -58,6 +58,8 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
             yield return new WaitForSecondsRealtime(dialogueDisplayTime);
             Time.timeScale = 1f;
+            if (i<dialogue.Count-1) {defaultBackboard.gameObject.SetActive(true);}
+            else {defaultBackboard.gameObject.SetActive(false);}
             dialogueBox.Hide();
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
             Debug.Log("Dialogue is finished.");
