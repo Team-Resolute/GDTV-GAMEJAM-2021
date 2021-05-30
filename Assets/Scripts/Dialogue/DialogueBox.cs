@@ -22,7 +22,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private Image frame;
     [SerializeField] private Image backboard;
     [SerializeField] private Light backLight;
-    private int lightIntensity = 20000;
+    private int lightIntensity = 10000;
     private int lightRange = 500;
     private bool operationDone = false;
 
@@ -70,7 +70,7 @@ public class DialogueBox : MonoBehaviour
         if (status == Status.Showing)
         {
             float alpha = frame.material.color.a;
-            alpha += (1f * Time.unscaledDeltaTime);
+            alpha += (1.3f * Time.unscaledDeltaTime);
             if (alpha >= 1f)
             {
                 alpha = 1f;

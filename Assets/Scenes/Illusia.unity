@@ -344,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 6577395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2.57}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1987485859}
   m_RootOrder: 0
@@ -356,7 +356,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6577395}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3072,7 +3072,7 @@ Transform:
   m_GameObject: {fileID: 102212400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -68.022, y: -403, z: 443}
-  m_LocalScale: {x: 2588.1602, y: 1080, z: 1}
+  m_LocalScale: {x: 25880.16, y: 10800, z: 1}
   m_Children: []
   m_Father: {fileID: 1363464461}
   m_RootOrder: 1
@@ -6366,7 +6366,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_Intensity: 2
   m_Range: 100
   m_SpotAngle: 30
@@ -32815,8 +32815,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289856337
-  m_fontColor: {r: 0.3191297, g: 0.009878943, b: 0.6981132, a: 1}
+    rgba: 4281794585
+  m_fontColor: {r: 0.09671162, g: 0, b: 0.21698111, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -32833,8 +32833,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -38928,7 +38928,7 @@ Transform:
   m_GameObject: {fileID: 1518067686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -449, y: 132, z: 359}
-  m_LocalScale: {x: 1920, y: 1080, z: 1}
+  m_LocalScale: {x: 19200, y: 10800, z: 1}
   m_Children: []
   m_Father: {fileID: 1363464461}
   m_RootOrder: 2
@@ -52213,7 +52213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 8e974d919873d444a87d5e2a6df401df, type: 2}
-  m_Color: {r: 0.43355927, g: 0.990566, b: 0.18222679, a: 1}
+  m_Color: {r: 0.66874677, g: 0.6981132, b: 0.6553044, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
