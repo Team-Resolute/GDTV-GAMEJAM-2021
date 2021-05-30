@@ -38,6 +38,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SceneShifter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -104,6 +105,7 @@
       <workItem from="1622345955434" duration="1254000" />
       <workItem from="1622349858821" duration="614000" />
       <workItem from="1622356149397" duration="2342000" />
+      <workItem from="1622359312447" duration="1738000" />
     </task>
     <servers />
   </component>
