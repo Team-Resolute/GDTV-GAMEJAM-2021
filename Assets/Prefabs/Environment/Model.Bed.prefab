@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6802746614083127140}
   - component: {fileID: 8226672009029502010}
   - component: {fileID: 9098884837674888999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model.Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

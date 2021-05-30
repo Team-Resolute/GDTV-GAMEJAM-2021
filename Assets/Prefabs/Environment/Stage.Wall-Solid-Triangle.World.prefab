@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 666265700480329520}
   - component: {fileID: 637360295956920257}
   - component: {fileID: 169438056583191413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stage.Wall-Solid-Triangle.World
   m_TagString: Untagged
   m_Icon: {fileID: 0}

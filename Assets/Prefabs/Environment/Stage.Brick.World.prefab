@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2284182958979163074}
   - component: {fileID: 5164156209468181067}
   - component: {fileID: 247045247691692759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stage.Brick.World
   m_TagString: Untagged
   m_Icon: {fileID: 0}

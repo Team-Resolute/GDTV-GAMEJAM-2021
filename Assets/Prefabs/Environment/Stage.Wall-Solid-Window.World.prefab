@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1157666041473551052}
   - component: {fileID: 3017658950267054908}
   - component: {fileID: 6362540589935532720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stage.Wall-Solid-Window.World
   m_TagString: Untagged
   m_Icon: {fileID: 0}

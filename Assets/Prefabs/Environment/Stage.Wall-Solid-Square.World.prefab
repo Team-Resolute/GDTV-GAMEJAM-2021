@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 121555855595467616}
   - component: {fileID: 8032363790855564686}
   - component: {fileID: 8309290310929116548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stage.Wall-Solid-Square.World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
