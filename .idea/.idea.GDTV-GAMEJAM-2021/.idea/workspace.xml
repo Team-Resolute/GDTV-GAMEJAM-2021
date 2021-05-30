@@ -19,9 +19,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/InitializeSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FadeIn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundBank/SoundBank.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/TriggerTest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,6 +41,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneShifter.cs" />
+      <option value="$PROJECT_DIR$/Assets/FadeIn.cs" />
+      <option value="$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -106,6 +110,7 @@
       <workItem from="1622349858821" duration="614000" />
       <workItem from="1622356149397" duration="2342000" />
       <workItem from="1622359312447" duration="1738000" />
+      <workItem from="1622407742558" duration="4846000" />
     </task>
     <servers />
   </component>
