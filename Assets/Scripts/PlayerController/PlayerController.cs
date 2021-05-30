@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundLayer;
     public Transform groundPoint;
+    public Transform headCheckPoint;
+    public Transform midCheckPoint;
     private bool isGrounded;
     private bool PlayImpactSound;
 
@@ -42,7 +44,28 @@ public class PlayerController : MonoBehaviour
         
         // Horizontal movement
         moveInput.x = Input.GetAxis("Horizontal");
-        body.velocity = new Vector3(moveInput.x * moveSpeed, body.velocity.y, 0);
+        
+        float dir = 1 * Mathf.Sign(moveInput.x);
+        bool isBlocked = false;
+        
+        if (moveInput.x != 0)
+        {
+            if (Physics.Raycast(groundPoint.position, Vector3.right * dir, .6f, groundLayer)
+            || Physics.Raycast(headCheckPoint.position, Vector3.right * dir, .6f, groundLayer)
+            || Physics.Raycast(midCheckPoint.position, Vector3.right * dir, .6f, groundLayer))
+            {
+                isBlocked = true;
+            }
+        }
+
+        float horizMovement = 0;
+        if (!isBlocked)
+        {
+            horizMovement = moveInput.x * moveSpeed;
+        }
+        
+        body.velocity = new Vector3(horizMovement, body.velocity.y, 0);
+        
 
         // Jumping
         RaycastHit hit;

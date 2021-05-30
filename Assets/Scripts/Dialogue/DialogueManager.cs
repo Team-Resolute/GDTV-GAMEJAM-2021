@@ -43,7 +43,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
-        Debug.Log("Dialogue is started.");
         currentDialogueSequence = StartCoroutine(nameof(ShowDialogue));
     }
 
@@ -51,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     {
         for (int i = 0; i < dialogue.Count; i++)
         {
+            if (i<dialogue.Count-1) {defaultBackboard.gameObject.SetActive(true);}
             Time.timeScale = 0f;
             DialogueSnippet currentSnippet = dialogue[i];
             DialogueBox dialogueBox = DetermineDialogueBox(currentSnippet);
@@ -58,11 +58,9 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
             yield return new WaitForSecondsRealtime(dialogueDisplayTime);
             Time.timeScale = 1f;
-            if (i<dialogue.Count-1) {defaultBackboard.gameObject.SetActive(true);}
-            else {defaultBackboard.gameObject.SetActive(false);}
+            if (i>=dialogue.Count-1) {defaultBackboard.gameObject.SetActive(false);}
             dialogueBox.Hide();
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
-            Debug.Log("Dialogue is finished.");
         }
     }
 

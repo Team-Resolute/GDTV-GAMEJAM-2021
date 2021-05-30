@@ -17400,8 +17400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.93317205, g: 0.9528302, b: 0.05842829, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectColor: {r: 0.93317205, g: 0.9528302, b: 0.05842829, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &686645868
 MonoBehaviour:
@@ -34521,8 +34521,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f0917090a46e20049a553a07f09c8b54, type: 2}
-  m_sharedMaterial: {fileID: -2460050885440083031, guid: f0917090a46e20049a553a07f09c8b54, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bf2adb62aaad5864f9fb5995e045d37f, type: 2}
+  m_sharedMaterial: {fileID: 8869771819284647765, guid: bf2adb62aaad5864f9fb5995e045d37f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -54354,8 +54354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &2037562850
 MonoBehaviour:
@@ -54370,7 +54370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 8e974d919873d444a87d5e2a6df401df, type: 2}
-  m_Color: {r: 0.66874677, g: 0.6981132, b: 0.6553044, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
