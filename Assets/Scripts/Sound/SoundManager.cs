@@ -12,6 +12,7 @@ namespace Sound
         {
             Jump,
             JumpImpact,
+            Step,
         }
 
         private static Dictionary<Sound, float> soundTimerDictionary;
@@ -35,7 +36,7 @@ namespace Sound
                 soundGameObject.transform.position = position;
                 AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
                 audioSource.clip = GetAudioClip(sound);
-                audioSource.maxDistance = 100f;
+                audioSource.maxDistance = 1000f;
                 audioSource.spatialBlend = 1f;
                 audioSource.rolloffMode = AudioRolloffMode.Linear;
                 audioSource.dopplerLevel = 0f;

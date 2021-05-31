@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool PlayImpactSound;
 
     private float verticalVelocitytimer = 0f;
-    
+    private Animator animator;
 
     private void IncreaseVerticalVelocityTimer()
     {
@@ -34,6 +34,12 @@ public class PlayerController : MonoBehaviour
             verticalVelocitytimer = 0;
         }
     }
+    
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     
     void Update()
     {
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isGrounded && verticalVelocitytimer > 1f)
             {
+                animator.SetFloat("Vertical", 0f);
                 SoundManager.PlaySound(SoundManager.Sound.JumpImpact, transform.position);   
             }
             
@@ -85,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            
+            animator.SetFloat("Vertical", 1f);
             SoundManager.PlaySound(SoundManager.Sound.Jump, transform.position);
             body.velocity += new Vector3(0f, jumpForce, 0f);
         }
@@ -101,6 +108,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0,0,0);
         }
+        
+        //Idle or forwardAnimationCheck
+        IdleOrForwardCheck();
     }
 
     public void Teleport(Vector3 pos)
@@ -108,12 +118,15 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
     }
 
-    private void PlayWalkLoopSound()
+    private void IdleOrForwardCheck()
     {
-        if (body.velocity.x > 0 && isGrounded)
+        if (Mathf.Abs(body.velocity.x) > 0 && isGrounded)
         {
-            
+            animator.SetFloat("Horizontal", Mathf.Abs(Input.GetAxis("Horizontal")));
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", -1f);
         }
     }
-
 }
