@@ -46,6 +46,12 @@ public class Sleepometer : MonoBehaviour
 
     }
 
+    public void ReceiveHarm(float harm)
+    {
+        //TODO: sound effect
+        //TODO: flash the meter
+        currentTimer -= harm;
+    }
     private IEnumerator ResolveTimeOut()
     {
         Time.timeScale = 0f;

@@ -21,6 +21,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MonsterProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/InitializeSound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FadeIn.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,11 +43,12 @@
       <option value="$PROJECT_DIR$/Assets/FadeIn.cs" />
       <option value="$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelChanger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Sleepometer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/StartMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Monster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneShifter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Sleepometer.cs" />
+      <option value="$PROJECT_DIR$/Assets/MonsterProjectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Monster.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -119,6 +121,7 @@
       <workItem from="1622433722022" duration="2260000" />
       <workItem from="1622445287334" duration="309000" />
       <workItem from="1622446179981" duration="208000" />
+      <workItem from="1622446931050" duration="5876000" />
     </task>
     <servers />
   </component>
