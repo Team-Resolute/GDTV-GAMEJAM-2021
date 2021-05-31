@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sound;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -14,16 +15,21 @@ public class StartMenu : MonoBehaviour
 
     public void ShowCredits()
     {
+        SoundManager.PlaySound(SoundManager.Sound.ClickButton);
         creditsScreen.SetActive(true);
     }
 
     public void HideCredits()
     {
+        SoundManager.PlaySound(SoundManager.Sound.ClickButton);
         creditsScreen.SetActive(false);
     }
 
     public void StartGameFalse()
     {
+        SoundManager.PlaySound(SoundManager.Sound.ClickButton);
+        // TODO Check if time should be waited for before starting the false start
+        SoundManager.PlaySound(SoundManager.Sound.ButtonFail);
         startButton.interactable = false;
         dialogueManager.NewDialogue();
         dialogueManager.AddDialogueSpeech(Speaker.Sandman, "Knock, knock.");
@@ -33,6 +39,7 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
+        SoundManager.PlaySound(SoundManager.Sound.ClickButton);
         levelChanger.ChangeScene(firstLevel);
     }
     

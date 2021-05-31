@@ -10,9 +10,20 @@ namespace Sound
     {
         public enum Sound
         {
+            ButtonFail,
+            ClickButton,
+            ClockTicking,
+            Died,
+            Hurt,
             Jump,
             JumpImpact,
+            MonsterWalking,
+            MonsterProjectile,
+            MotherDialogue,
+            SandmanDialogue,
+            Spawn,
             Step,
+            Tinkering,
         }
 
         private static Dictionary<Sound, float> soundTimerDictionary;

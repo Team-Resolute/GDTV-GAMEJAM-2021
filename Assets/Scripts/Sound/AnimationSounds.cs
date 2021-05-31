@@ -7,7 +7,7 @@ namespace Sound
         public void PlayStepSound()
         {
             SoundManager.PlaySound(SoundManager.Sound.Step, transform.position); 
-            Debug.Log("Sound");
+            // Debug.Log("Sound");
         }
     }
 }

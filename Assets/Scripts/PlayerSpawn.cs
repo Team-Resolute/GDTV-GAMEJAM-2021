@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sound;
 using UnityEngine;
 
 public class PlayerSpawn : MonoBehaviour
@@ -47,7 +48,9 @@ public class PlayerSpawn : MonoBehaviour
 
         yield return new WaitForSeconds(0.25f);
         // player.GetComponent<PlayerMovement>().enabled = true;
-        player.GetComponent<PlayerController>().enabled = true;
+        PlayerController pc = player.GetComponent<PlayerController>();
+        pc.enabled = true;
+        Sound.SoundManager.PlaySound(SoundManager.Sound.Spawn, pc.gameObject.transform.position);
         sleepometer.StartTimer();
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sound;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +20,10 @@ public class Sleepometer : MonoBehaviour
     public void StartTimer()
     {
         isActive = true;
+
+        // TODO See that it works as a looping sound
+        SoundManager.PlaySound(SoundManager.Sound.ClockTicking);
+
         currentTimer = maxTimer;
     }
 
@@ -30,6 +35,8 @@ public class Sleepometer : MonoBehaviour
             currentTimer -= Time.deltaTime;
             if(currentTimer <= 0)
             {
+                // TODO Stop the ticking sound
+
                 currentTimer = 0;
                 //SceneManager.LoadScene(sceneToLoad);
                 isActive = false;
@@ -48,7 +55,9 @@ public class Sleepometer : MonoBehaviour
 
     public void ReceiveHarm(float harm)
     {
+        PlayerController pc = FindObjectOfType<PlayerController>();
         //TODO: sound effect
+        Sound.SoundManager.PlaySound(SoundManager.Sound.Hurt, pc.gameObject.transform.position);
         //TODO: flash the meter
         currentTimer -= harm;
     }
@@ -61,6 +70,7 @@ public class Sleepometer : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.25f);
         }
         Time.timeScale = 1f;
+        Sound.SoundManager.PlaySound(SoundManager.Sound.Died);
         FindObjectOfType<LevelChanger>().ChangeScene(levelToLoad);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sound;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,6 +63,12 @@ public class PlsyerInteraction : MonoBehaviour
         if (target == null) { return;}
         float shrinkFactor = 1;
         interacting = true;
+
+        interactingPos = transform.position;
+
+        // TODO Implement looping sound
+        SoundManager.PlaySound(SoundManager.Sound.Tinkering, interactingPos);
+
         maxTimer = target.GetInteractTime();
         timer = maxTimer;
         bar.gameObject.SetActive(true);
@@ -69,7 +76,6 @@ public class PlsyerInteraction : MonoBehaviour
         Vector3 adjustedScale = Vector3.one;
         adjustedScale.x = timer / shrinkFactor;
         bar.transform.localScale = adjustedScale;
-        interactingPos = transform.position;
     }
 
     void ProcessTimer()
@@ -90,6 +96,8 @@ public class PlsyerInteraction : MonoBehaviour
         bar.gameObject.SetActive(false);
         bar.fillAmount = 1f;
         interacting = false;
+
+        // TODO Stop looping tinkering sound
     }
 
     void InteractSuccess()
@@ -97,6 +105,9 @@ public class PlsyerInteraction : MonoBehaviour
         bar.gameObject.SetActive(false);
         bar.fillAmount = 1f;
         interacting = false;
+
+        // TODO Stop looping tinkering sound
+
         target.Interact(this.gameObject);
         target = null;
     }

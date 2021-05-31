@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Sound;
 using UnityEngine;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
@@ -67,8 +68,16 @@ public class DialogueManager : MonoBehaviour
     private DialogueBox DetermineDialogueBox(DialogueSnippet snippet)
     {
         DialogueBox dialogueBox = null;
-        if (snippet.speaker == Speaker.Mother) { dialogueBox = motherDialogueBox; }
-        if (snippet.speaker == Speaker.Sandman) { dialogueBox = sandmanDialogueBox; }
+        if (snippet.speaker == Speaker.Mother) 
+        { 
+            dialogueBox = motherDialogueBox;
+            SoundManager.PlaySound(SoundManager.Sound.MotherDialogue, transform.position);   
+        }
+        if (snippet.speaker == Speaker.Sandman) 
+        { 
+            dialogueBox = sandmanDialogueBox; 
+            SoundManager.PlaySound(SoundManager.Sound.SandmanDialogue, transform.position);   
+        }
         if (snippet.speaker == Speaker.Player) { dialogueBox = playerDialogueBox; }
 
         if (dialogueBox == null)

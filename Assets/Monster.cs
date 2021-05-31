@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Sound;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
@@ -46,6 +47,10 @@ public class Monster : MonoBehaviour
         if (!hit)
         {
             float move = Mathf.Clamp(Mathf.Sin(Time.time) * moveSpeed, moveSpeed * 0.2f, moveSpeed);
+            
+            // TODO Probably changed that to reflect player's stepping sound implementation
+            SoundManager.PlaySound(SoundManager.Sound.MonsterWalking, transform.position);
+
             transform.position = transform.position + transform.forward * (move * Time.deltaTime);
             return;
         }
@@ -79,6 +84,9 @@ public class Monster : MonoBehaviour
             float variation = projectileLaunchForce / 2f;
             projectileLaunchForce = projectileLaunchForce + Random.Range(-variation, variation);
             projectilePool[i].GetComponent<Rigidbody>().velocity = projectileLaunchOrigin.forward * projectileLaunchForce;
+
+            SoundManager.PlaySound(SoundManager.Sound.MonsterProjectile, projectileLaunchOrigin.position);
+
             yield return new WaitForSeconds(0.2f);
         }
         yield return new WaitForSeconds(0.5f);
