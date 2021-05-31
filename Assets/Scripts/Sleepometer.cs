@@ -8,11 +8,13 @@ using TMPro;
 public class Sleepometer : MonoBehaviour
 {
     [SerializeField] public float maxTimer = 300f;
-    [SerializeField] public string sceneToLoad;
+    //[SerializeField] public string sceneToLoad;
+    [SerializeField] public Level levelToLoad;
     [SerializeField] public Image sheets;
     [SerializeField] public TextMeshProUGUI timerUI;
     private float currentTimer = 0;
     private bool isActive = false;
+    
 
     public void StartTimer()
     {
@@ -29,7 +31,9 @@ public class Sleepometer : MonoBehaviour
             if(currentTimer <= 0)
             {
                 currentTimer = 0;
-                SceneManager.LoadScene(sceneToLoad);
+                //SceneManager.LoadScene(sceneToLoad);
+                isActive = false;
+                StartCoroutine(nameof(ResolveTimeOut));
             }
             else
             {
@@ -40,5 +44,17 @@ public class Sleepometer : MonoBehaviour
             }
         }
 
-    } 
+    }
+
+    private IEnumerator ResolveTimeOut()
+    {
+        Time.timeScale = 0f;
+        for (int i = 0; i < 10; i++)
+        {
+            timerUI.enabled = !(timerUI.enabled);
+            yield return new WaitForSecondsRealtime(0.25f);
+        }
+        Time.timeScale = 1f;
+        FindObjectOfType<LevelChanger>().ChangeScene(levelToLoad);
+    }
 }
