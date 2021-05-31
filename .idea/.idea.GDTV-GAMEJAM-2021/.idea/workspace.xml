@@ -43,12 +43,12 @@
       <option value="$PROJECT_DIR$/Assets/FadeIn.cs" />
       <option value="$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelChanger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/StartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneShifter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Sleepometer.cs" />
       <option value="$PROJECT_DIR$/Assets/MonsterProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Monster.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -63,7 +63,6 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -123,8 +122,6 @@
       <workItem from="1622445287334" duration="309000" />
       <workItem from="1622446179981" duration="208000" />
       <workItem from="1622446931050" duration="5876000" />
-      <workItem from="1622455060055" duration="289000" />
-      <workItem from="1622480834216" duration="571000" />
     </task>
     <servers />
   </component>
