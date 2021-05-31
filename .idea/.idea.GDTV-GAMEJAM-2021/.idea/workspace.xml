@@ -37,7 +37,6 @@
       <option value="$PROJECT_DIR$/Assets/SpeechEventOnApproach.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneShifter.cs" />
@@ -45,6 +44,8 @@
       <option value="$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelChanger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Sleepometer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/StartMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -114,6 +115,7 @@
       <workItem from="1622359312447" duration="1738000" />
       <workItem from="1622407742558" duration="4846000" />
       <workItem from="1622420790475" duration="1830000" />
+      <workItem from="1622433722022" duration="2260000" />
     </task>
     <servers />
   </component>

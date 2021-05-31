@@ -88,6 +88,7 @@ public class DialogueBox : MonoBehaviour
             if (alpha <= 0f)
             {
                 alpha = 0f;
+                textbox.gameObject.SetActive(false);
                 status = Status.Hidden;
                 operationDone = true;
             } 
@@ -100,6 +101,7 @@ public class DialogueBox : MonoBehaviour
     {
         if (status != Status.Showing && status != Status.Shown)
         {
+            textbox.gameObject.SetActive(true);
             textbox.text = snippet.speech;
             status = Status.Showing;
         }
