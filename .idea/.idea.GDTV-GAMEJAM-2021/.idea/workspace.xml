@@ -46,6 +46,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Sleepometer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/StartMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Monster.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -116,6 +117,7 @@
       <workItem from="1622407742558" duration="4846000" />
       <workItem from="1622420790475" duration="1830000" />
       <workItem from="1622433722022" duration="2260000" />
+      <workItem from="1622445287334" duration="309000" />
     </task>
     <servers />
   </component>
