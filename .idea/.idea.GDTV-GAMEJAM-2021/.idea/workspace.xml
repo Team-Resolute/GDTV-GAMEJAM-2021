@@ -32,6 +32,7 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -118,6 +119,7 @@
       <workItem from="1622446931050" duration="5876000" />
       <workItem from="1622455077447" duration="4920000" />
       <workItem from="1622481796854" duration="50000" />
+      <workItem from="1622514072554" duration="106000" />
     </task>
     <servers />
   </component>

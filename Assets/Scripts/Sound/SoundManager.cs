@@ -41,6 +41,7 @@ namespace Sound
 
         public static void PlaySound(Sound sound, Vector3 position)
         {
+            return; //TODO: Remove this line. It was put in to work around null reference errors due to missing sound files being triggered
             if (CanPlaySound(sound))
             {
                 GameObject soundGameObject = new GameObject("Sound");
