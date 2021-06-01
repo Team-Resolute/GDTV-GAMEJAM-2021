@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ItemColected
   m_EditorClassIdentifier: 
   soundBank:
-  - {fileID: 8300000, guid: 86c4dbb1e86bb4d4da4aca73071f3da7, type: 3}
+  - {fileID: 8300000, guid: 52fa2482adfb7e048be66ff23a87f58a, type: 3}
