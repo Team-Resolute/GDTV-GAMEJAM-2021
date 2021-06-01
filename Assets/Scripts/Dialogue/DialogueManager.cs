@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueBox playerDialogueBox = default;
     [SerializeField] private DialogueBox sandmanDialogueBox = default;
     [SerializeField] private DialogueBox motherDialogueBox = default;
+    [SerializeField] private DialogueBox minorCharacterDialogueBox = default;
     [SerializeField] private Image defaultBackboard = default;
     private static Coroutine currentDialogueSequence = default;
     public static DialogueManager Instance { get; private set; }
@@ -44,6 +45,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        if (currentDialogueSequence != null)
+        {
+            StopCoroutine(currentDialogueSequence);           
+        }
         currentDialogueSequence = StartCoroutine(nameof(ShowDialogue));
     }
 
@@ -77,6 +82,12 @@ public class DialogueManager : MonoBehaviour
         { 
             dialogueBox = sandmanDialogueBox; 
             SoundManager.PlaySound(SoundManager.Sound.SandmanDialogue, transform.position);   
+        }
+
+        if (snippet.speaker == Speaker.MinorCharacter)
+        {
+            dialogueBox = minorCharacterDialogueBox;
+            SoundManager.PlaySound(SoundManager.Sound.MinorCharacterDialogue, transform.position);
         }
         if (snippet.speaker == Speaker.Player) { dialogueBox = playerDialogueBox; }
 

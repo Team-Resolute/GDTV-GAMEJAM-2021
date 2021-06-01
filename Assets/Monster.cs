@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Sound;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public interface IDamageable
+{
+    void TakeDamage(int damage);
+}
+
+public class Monster : MonoBehaviour, IDamageable
 {
 
-    private float hitpoints = 5f;
+    private int hitpoints = 3;
     private float maxMoveSpeed = 2f;
     private float moveSpeed = 10f;
     private bool attacking = false;
@@ -22,7 +28,9 @@ public class Monster : MonoBehaviour
     [SerializeField] private Transform raycastOrigin = default;
     [SerializeField] private Transform raycastTarget = default;
     [SerializeField] private LayerMask layerMask;
-    
+
+    [SerializeField ]private GameObject lootPrefab = default;
+    [SerializeField ]private GameObject deathEffectPrefab = default;
     
     void Start()
     {
@@ -93,6 +101,31 @@ public class Monster : MonoBehaviour
         moveSpeed = maxMoveSpeed;
         attacking = false;
         attackTimer = attackDelay;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        SoundManager.PlaySound(SoundManager.Sound.MonsterHurt, transform.position);
+        hitpoints -= damage;
+        if (hitpoints < 1)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled = false;
+        }
+
+        if (deathEffectPrefab) { Instantiate(deathEffectPrefab, transform.position, Quaternion.identity); }
+
+        if (lootPrefab) { Instantiate(lootPrefab, transform.position, Quaternion.identity); }
+
+        Destroy(this.gameObject);
     }
     
 }

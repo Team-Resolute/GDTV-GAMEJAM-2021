@@ -21,9 +21,13 @@ namespace Sound
             MonsterProjectile,
             MotherDialogue,
             SandmanDialogue,
+            MinorCharacterDialogue,
             Spawn,
             Step,
             Tinkering,
+            ItemCollected,
+            PlayerShooting,
+            MonsterHurt
         }
 
         private static Dictionary<Sound, float> soundTimerDictionary;

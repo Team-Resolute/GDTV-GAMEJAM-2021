@@ -25,14 +25,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/InitializeSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Combat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundBank/SoundBank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerProjectile.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueSnippet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Sleepometer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Monster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Combat.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerProjectile.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -119,7 +131,7 @@
       <workItem from="1622446931050" duration="5876000" />
       <workItem from="1622455077447" duration="4920000" />
       <workItem from="1622481796854" duration="50000" />
-      <workItem from="1622514072554" duration="106000" />
+      <workItem from="1622514072554" duration="13655000" />
     </task>
     <servers />
   </component>

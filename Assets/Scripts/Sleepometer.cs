@@ -15,7 +15,7 @@ public class Sleepometer : MonoBehaviour
     [SerializeField] public TextMeshProUGUI timerUI;
     private float currentTimer = 0;
     private bool isActive = false;
-    
+    [SerializeField] public GameObject dialogueOnFinish = default;
 
     public void StartTimer()
     {
@@ -64,6 +64,7 @@ public class Sleepometer : MonoBehaviour
     private IEnumerator ResolveTimeOut()
     {
         Time.timeScale = 0f;
+        if (dialogueOnFinish) {dialogueOnFinish.SetActive(true);}
         for (int i = 0; i < 10; i++)
         {
             timerUI.enabled = !(timerUI.enabled);
