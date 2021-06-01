@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -31,7 +32,7 @@ namespace Sound
         }
 
         private static Dictionary<Sound, float> soundTimerDictionary;
-        private static Dictionary<Sound, int> soundLoopDictionary;
+        private static Dictionary<int, GameObject> soundLoopDictionary;
 
         private static GameObject oneShotGameObject;
         private static AudioSource oneShotAudioSource;
@@ -41,12 +42,13 @@ namespace Sound
         {
             soundTimerDictionary = new Dictionary<Sound, float>();
             //soundTimerDictionary[Sound.Walk] = 0f; //This is foor loop sounds 
+            
+            soundLoopDictionary = new Dictionary<int, GameObject>();
         }
 
         public static void PlaySound(Sound sound, Vector3 position)
         {
-            return; //TODO: Remove this line. It was put in to work around null reference errors due to missing sound files being triggered
-            if (CanPlaySound(sound))
+            if (GetAudioClip(sound) != null)
             {
                 GameObject soundGameObject = new GameObject("Sound");
                 soundGameObject.transform.position = position;
@@ -62,9 +64,56 @@ namespace Sound
             }
         }
         
+        public static void PlaySoundLoop(Sound sound, Vector3 position, MonoBehaviour gameObject)
+        {
+            if (GetAudioClip(sound) != null)
+            {
+                GameObject soundGameObject = new GameObject("Sound");
+                soundGameObject.transform.position = position;
+                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                audioSource.clip = GetAudioClip(sound);
+                audioSource.maxDistance = 1000f;
+                audioSource.spatialBlend = 1f;
+                audioSource.rolloffMode = AudioRolloffMode.Linear;
+                audioSource.dopplerLevel = 0f;
+                audioSource.loop = true;
+                audioSource.Play();
+                soundLoopDictionary.Add(gameObject.GetInstanceID(), soundGameObject);
+            }
+        }
+
+        public static void StopLoop(MonoBehaviour gameObjectId)
+        {
+            if (soundLoopDictionary.ContainsKey(gameObjectId.GetInstanceID()))
+            {
+                gameObjectId.StartCoroutine(StartFade(soundLoopDictionary[gameObjectId.GetInstanceID()].GetComponent<AudioSource>(), 1f, 0f));
+                soundLoopDictionary.Remove(gameObjectId.GetInstanceID());
+            }
+        }
+        
+        public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+        {
+            float currentTime = 0;
+            float start = audioSource.volume;
+
+            while (audioSource.volume > 0)
+            {
+                //if (audioSource != null)
+                {
+                     currentTime += Time.deltaTime;
+                     audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);   
+                }
+                yield return null;
+            }
+            audioSource.GetInstanceID();
+            Object.Destroy(audioSource.gameObject);
+            
+            yield break;
+        }
+        
         public static void PlaySound(Sound sound)
         {
-            if (CanPlaySound(sound))
+            if (GetAudioClip(sound) != null)
             {
                 if (oneShotGameObject == null)
                 {
@@ -73,39 +122,6 @@ namespace Sound
                 }
                 
                 oneShotAudioSource.PlayOneShot(GetAudioClip(sound));
-            }
-        }
-
-        private static bool CanPlaySound(Sound sound)
-        {
-            switch (sound)
-            {
-               default:
-                   return true;
-               
-               /*case Sound.sound:
-               {
-                   if (soundTimerDictionary.ContainsKey(sound))
-                   {
-                       float lastTimePlayed = soundTimerDictionary[sound];
-                       float playerMoveTimerMax = 1f;
-               
-                       if (lastTimePlayed + playerMoveTimerMax < Time.time)
-                       {
-                           soundTimerDictionary[sound] = Time.time;
-                           return true;
-                       }
-                       else
-                       {
-                           return false;
-                       }
-                   }
-                   else
-                   {
-                       return true;
-                   }*/
-               
-               // //break;
             }
         }
         
@@ -118,7 +134,7 @@ namespace Sound
                     return (AudioClip)soundAudioClip.audioClip.soundBank.GetValue(Random.Range(0,soundAudioClip.audioClip.soundBank.Length));
                 }
             }
-            Debug.LogError("Sound" + sound + "not found!");
+            Debug.Log("Sound need to be added!");
             return null;
         }
 

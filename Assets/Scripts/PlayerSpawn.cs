@@ -16,6 +16,7 @@ public class PlayerSpawn : MonoBehaviour
         if (particles)
         {
             yield return new WaitForSeconds(0.25f);
+            Sound.SoundManager.PlaySound(SoundManager.Sound.Spawn, transform.position);
             while (particles.particleCount < 250)
             {
                 if (Input.GetKey(KeyCode.A))
@@ -30,7 +31,6 @@ public class PlayerSpawn : MonoBehaviour
         }
 
         GameObject player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
-
         if (particles)
         {
             while (particles.particleCount < 250)
@@ -50,7 +50,7 @@ public class PlayerSpawn : MonoBehaviour
         // player.GetComponent<PlayerMovement>().enabled = true;
         PlayerController pc = player.GetComponent<PlayerController>();
         pc.enabled = true;
-        Sound.SoundManager.PlaySound(SoundManager.Sound.Spawn, pc.gameObject.transform.position);
+        
         sleepometer.StartTimer();
     }
 

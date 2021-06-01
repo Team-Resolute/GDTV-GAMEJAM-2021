@@ -20,9 +20,8 @@ public class Sleepometer : MonoBehaviour
     public void StartTimer()
     {
         isActive = true;
-
-        // TODO See that it works as a looping sound
-        SoundManager.PlaySound(SoundManager.Sound.ClockTicking);
+        
+        SoundManager.PlaySoundLoop(SoundManager.Sound.ClockTicking, transform.position, this);
 
         currentTimer = maxTimer;
     }
@@ -35,8 +34,8 @@ public class Sleepometer : MonoBehaviour
             currentTimer -= Time.deltaTime;
             if(currentTimer <= 0)
             {
-                // TODO Stop the ticking sound
-
+                SoundManager.StopLoop(this);
+                
                 currentTimer = 0;
                 //SceneManager.LoadScene(sceneToLoad);
                 isActive = false;
@@ -56,7 +55,6 @@ public class Sleepometer : MonoBehaviour
     public void ReceiveHarm(float harm)
     {
         PlayerController pc = FindObjectOfType<PlayerController>();
-        //TODO: sound effect
         Sound.SoundManager.PlaySound(SoundManager.Sound.Hurt, pc.gameObject.transform.position);
         //TODO: flash the meter
         currentTimer -= harm;

@@ -66,8 +66,8 @@ public class PlsyerInteraction : MonoBehaviour
 
         interactingPos = transform.position;
 
-        // TODO Implement looping sound
-        SoundManager.PlaySound(SoundManager.Sound.Tinkering, interactingPos);
+        //TODO Sound of tinkering
+        SoundManager.PlaySoundLoop(SoundManager.Sound.Tinkering, interactingPos,this);
 
         maxTimer = target.GetInteractTime();
         timer = maxTimer;
@@ -97,7 +97,7 @@ public class PlsyerInteraction : MonoBehaviour
         bar.fillAmount = 1f;
         interacting = false;
 
-        // TODO Stop looping tinkering sound
+        SoundManager.StopLoop(this);
     }
 
     void InteractSuccess()
@@ -106,7 +106,7 @@ public class PlsyerInteraction : MonoBehaviour
         bar.fillAmount = 1f;
         interacting = false;
 
-        // TODO Stop looping tinkering sound
+        SoundManager.StopLoop(this);
 
         target.Interact(this.gameObject);
         target = null;
