@@ -11,6 +11,7 @@ public class StartMenu : MonoBehaviour
     [SerializeField] private LevelChanger levelChanger = default;
     [SerializeField] private GameObject creditsScreen = default;
     [SerializeField] private DialogueManager dialogueManager = default;
+    [SerializeField] private GameObject sleepometer;
     [SerializeField] Button startButton = default;
 
     public void ShowCredits()
@@ -35,6 +36,12 @@ public class StartMenu : MonoBehaviour
         dialogueManager.AddDialogueSpeech(Speaker.Sandman, "Knock, knock.");
         dialogueManager.AddDialogueSpeech(Speaker.Player, "Umm... who's there?");
         dialogueManager.StartDialogue();
+
+        // Instantiate and start Sleepometer
+        GameObject sleepometerInstance = Instantiate(sleepometer, new Vector3(0,0,0), Quaternion.identity);
+        Sleepometer sleepometerScript = sleepometerInstance.GetComponentInChildren<Sleepometer>();
+        sleepometerScript.maxTimer = 20;
+        sleepometerScript.StartTimer();
     }
 
     public void StartGame()

@@ -423,6 +423,7 @@ MonoBehaviour:
   levelChanger: {fileID: 2144693779}
   creditsScreen: {fileID: 854152917}
   dialogueManager: {fileID: 1423138209}
+  sleepometer: {fileID: 3869799223131352587, guid: 3b66dce5778fd494d9c1c494f45f9ac4, type: 3}
   startButton: {fileID: 163628634}
 --- !u!4 &323182590
 Transform:
