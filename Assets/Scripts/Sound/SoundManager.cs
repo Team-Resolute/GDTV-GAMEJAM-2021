@@ -134,7 +134,7 @@ namespace Sound
                     return (AudioClip)soundAudioClip.audioClip.soundBank.GetValue(Random.Range(0,soundAudioClip.audioClip.soundBank.Length));
                 }
             }
-            Debug.Log("Sound need to be added!");
+            Debug.Log("Sound need to be added: " + Enum.GetName(typeof(Sound), sound));
             return null;
         }
 
