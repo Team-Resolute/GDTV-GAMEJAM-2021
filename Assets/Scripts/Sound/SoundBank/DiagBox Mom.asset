@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: DiagBox Mom
   m_EditorClassIdentifier: 
   soundBank:
-  - {fileID: 8300000, guid: d67099b36cab0f840a458d92762616d7, type: 3}
+  - {fileID: 8300000, guid: 95a63207ac1d5a4458f22f5ba2b21119, type: 3}
+  - {fileID: 8300000, guid: 8f4477fe1094b6447933bec7e933ef9a, type: 3}
+  - {fileID: 8300000, guid: ec56f15e29e9a704ab7b4a768256dae6, type: 3}
