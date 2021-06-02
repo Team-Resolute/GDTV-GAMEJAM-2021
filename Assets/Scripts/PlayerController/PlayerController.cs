@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.AccessControl;
 using System.Timers;
 using Sound;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
     private float verticalVelocitytimer = 0f;
     private Animator animator;
+
+    private float direction = 1;
 
     private void IncreaseVerticalVelocityTimer()
     {
@@ -101,14 +105,8 @@ public class PlayerController : MonoBehaviour
         // Character facing right or left
 
         
-        if(transform.rotation == Quaternion.Euler(0,0,0) && body.velocity.x < 0)
-        {
-            transform.rotation = Quaternion.Euler(0,180,0);
-        }
-        else if(transform.rotation == Quaternion.Euler(0,180,0) && body.velocity.x > 0)
-        {
-            transform.rotation = Quaternion.Euler(0,0,0);
-        }
+        AdjustRotation(body.velocity.x);
+        StayOn2DPlane();
         
         //Idle or forwardAnimationCheck
         IdleOrForwardCheck();
@@ -130,4 +128,29 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Horizontal", -1f);
         }
     }
+    
+    void AdjustRotation(float movement)
+    {
+        if (movement > 0) { direction = 1;}
+        if (movement < 0) { direction = -1;}
+
+        transform.rotation = Quaternion.identity;
+        Vector3 rot = transform.rotation.eulerAngles;
+        rot.z = 0;
+        transform.rotation = Quaternion.Euler(rot);
+
+        if (direction == -1) { rot.y = 180f; }
+        if (direction == 1) { rot.y = 0f; }
+
+        transform.rotation = quaternion.Euler(rot.x, rot.y, rot.z);
+    }
+
+    void StayOn2DPlane()
+    {
+        transform.position = new Vector3(transform.position.x,
+            transform.position.y,
+            0f);
+    }
+    
+    
 }
