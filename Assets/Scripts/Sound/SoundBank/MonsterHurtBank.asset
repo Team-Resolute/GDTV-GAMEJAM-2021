@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f826fb6c7d5f94b8f100a275189cf5, type: 3}
+  m_Name: MonsterHurtBank
+  m_EditorClassIdentifier: 
+  soundBank:
+  - {fileID: 8300000, guid: a110bbbcaef8c084da80c337d61ba53a, type: 3}
+  - {fileID: 8300000, guid: b6ccc58e0f589dd4b909dc5e5a4cdfa4, type: 3}
+  - {fileID: 8300000, guid: be4947cc4a193db4985c2ecb36664bc9, type: 3}
+  - {fileID: 8300000, guid: 1b132e6403a7f4041a2c5cfa20f38474, type: 3}
