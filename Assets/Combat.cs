@@ -89,7 +89,8 @@ public class Combat : MonoBehaviour
     public void Reload()
     {
         ammo = maxAmmo;
-        SoundManager.PlaySound(SoundManager.Sound.ItemCollected, transform.position);
+        GameObject player = GameObject.Find("Player(Clone)");
+        SoundManager.PlaySound(SoundManager.Sound.ItemCollected, player.transform.position, 0.3f);
         UpdateAmmoUI();
     }
 

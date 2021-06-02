@@ -62,8 +62,7 @@ public class Monster : MonoBehaviour, IDamageable
         {
             float move = Mathf.Clamp(Mathf.Sin(Time.time) * moveSpeed, moveSpeed * 0.2f, moveSpeed);
             
-            // TODO Probably changed that to reflect player's stepping sound implementation
-            SoundManager.PlaySound(SoundManager.Sound.MonsterWalking, transform.position);
+            // TODO Probably changed that to reflect player's stepping sound implementation 
 
             transform.position = transform.position + transform.forward * (move * Time.deltaTime);
             return;
