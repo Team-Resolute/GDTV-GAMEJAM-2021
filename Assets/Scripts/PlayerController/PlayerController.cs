@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using Sound;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -49,8 +50,8 @@ public class PlayerController : MonoBehaviour
         IncreaseVerticalVelocityTimer();
         
         // Horizontal movement
-        moveInput.x = Input.GetAxis("Horizontal");
-        
+        moveInput.x = Input.GetAxis("Horizontal") * Time.timeScale;
+
         float dir = 1 * Mathf.Sign(moveInput.x);
         bool isBlocked = false;
         
@@ -90,7 +91,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump") && isGrounded && Time.timeScale > 0f)
         {
             animator.SetFloat("Vertical", 1f);
             SoundManager.PlaySound(SoundManager.Sound.Jump, transform.position);
