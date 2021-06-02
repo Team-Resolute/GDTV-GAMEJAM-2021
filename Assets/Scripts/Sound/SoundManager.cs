@@ -31,8 +31,8 @@ namespace Sound
             MonsterHurt
         }
 
-        private static Dictionary<Sound, float> soundTimerDictionary;
-        private static Dictionary<int, GameObject> soundLoopDictionary;
+        private static Dictionary<Sound, float> soundTimerDictionary = new Dictionary<Sound, float>();
+        private static Dictionary<int, GameObject> soundLoopDictionary = new Dictionary<int, GameObject>();
 
         private static GameObject oneShotGameObject;
         private static AudioSource oneShotAudioSource;

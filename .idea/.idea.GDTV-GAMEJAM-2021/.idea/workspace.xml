@@ -37,7 +37,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueBox.cs" />
       <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueSnippet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
       <option value="$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
@@ -45,6 +44,7 @@
       <option value="$PROJECT_DIR$/Assets/Monster.cs" />
       <option value="$PROJECT_DIR$/Assets/Combat.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerProjectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -132,6 +132,7 @@
       <workItem from="1622455077447" duration="4920000" />
       <workItem from="1622481796854" duration="50000" />
       <workItem from="1622514072554" duration="13655000" />
+      <workItem from="1622603596669" duration="609000" />
     </task>
     <servers />
   </component>
