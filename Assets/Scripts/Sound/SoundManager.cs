@@ -67,6 +67,25 @@ namespace Sound
             }
         }
         
+        public static void PlaySound(Sound sound, Vector3 position, float volume)
+        {
+            if (GetAudioClip(sound) != null)
+            {
+                GameObject soundGameObject = new GameObject("Sound");
+                soundGameObject.transform.position = position;
+                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                audioSource.clip = GetAudioClip(sound);
+                audioSource.maxDistance = 1000f;
+                audioSource.spatialBlend = 1f;
+                audioSource.rolloffMode = AudioRolloffMode.Linear;
+                audioSource.dopplerLevel = 0f;
+                audioSource.volume = volume;
+                audioSource.Play();
+                
+                Object.Destroy(soundGameObject, audioSource.clip.length);
+            }
+        }
+        
         public static void PlaySoundLoop(Sound sound, Vector3 position, MonoBehaviour gameObject)
         {
             if (GetAudioClip(sound) != null)

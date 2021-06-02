@@ -68,6 +68,9 @@ public class Combat : MonoBehaviour
 
             Rigidbody projectile = projectilePool[projectileNum-1];
             projectile.gameObject.SetActive(true);
+            GameObject player = GameObject.Find("Player(Clone)"); //This will cause errors if the player object change and its not a good solution
+            SoundManager.PlaySound(SoundManager.Sound.PlayerShooting, player.transform.position, 0.2f);
+            Debug.Log("Player Shooting");
             projectile.transform.position = firePoint.position;
             projectile.transform.forward = firePoint.forward;
             projectile.velocity = firePoint.forward * shootingForce;
@@ -76,7 +79,7 @@ public class Combat : MonoBehaviour
             {
                 if (needMoreAmmo) {needMoreAmmo.gameObject.SetActive(true);}
             }
-            SoundManager.PlaySound(SoundManager.Sound.PlayerShooting, transform.position);
+            
         }
 
         UpdateAmmoUI();

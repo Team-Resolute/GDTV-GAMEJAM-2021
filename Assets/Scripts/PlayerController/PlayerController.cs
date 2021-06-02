@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         IncreaseVerticalVelocityTimer();
         
         // Horizontal movement
-        moveInput.x = Input.GetAxis("Horizontal") * Time.timeScale;
+        moveInput.x = Input.GetAxis("Horizontal");
 
         float dir = 1 * Mathf.Sign(moveInput.x);
         bool isBlocked = false;
