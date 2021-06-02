@@ -48,6 +48,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Door.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SceneShifter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -136,6 +137,7 @@
       <workItem from="1622481796854" duration="50000" />
       <workItem from="1622514072554" duration="13655000" />
       <workItem from="1622603596669" duration="10192000" />
+      <workItem from="1622618097707" duration="1137000" />
     </task>
     <servers />
   </component>
