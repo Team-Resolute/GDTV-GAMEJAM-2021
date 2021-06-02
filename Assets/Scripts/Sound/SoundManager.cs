@@ -28,7 +28,10 @@ namespace Sound
             Tinkering,
             ItemCollected,
             PlayerShooting,
-            MonsterHurt
+            MonsterHurt,
+            MonsterDeath,
+            DoorAppearing,
+            DoorUsed
         }
 
         private static Dictionary<Sound, float> soundTimerDictionary = new Dictionary<Sound, float>();

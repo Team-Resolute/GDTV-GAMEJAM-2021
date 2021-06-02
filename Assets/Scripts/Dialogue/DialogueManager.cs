@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private static Coroutine currentDialogueSequence = default;
     public static DialogueManager Instance { get; private set; }
     private float dialogueDisplayTime = 1.5f;
+    private bool dialogueInProgress = false;
     
     private void Awake()
     {
@@ -45,6 +46,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        if (dialogueInProgress) { return;}
+        dialogueInProgress = true;
         if (currentDialogueSequence != null)
         {
             StopCoroutine(currentDialogueSequence);           
@@ -67,7 +70,10 @@ public class DialogueManager : MonoBehaviour
             if (i>=dialogue.Count-1) {defaultBackboard.gameObject.SetActive(false);}
             dialogueBox.Hide();
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
+            dialogueBox.Hide();
         }
+
+        dialogueInProgress = false;
     }
 
     private DialogueBox DetermineDialogueBox(DialogueSnippet snippet)

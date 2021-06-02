@@ -230,7 +230,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 576
   lootPrefab: {fileID: 0}
-  deathEffectPrefab: {fileID: 0}
+  deathEffectPrefab: {fileID: 6538717598635703531, guid: 71893766eb6e7db4e9b49ae686e2dec7, type: 3}
 --- !u!65 &4786461040707527125
 BoxCollider:
   m_ObjectHideFlags: 0

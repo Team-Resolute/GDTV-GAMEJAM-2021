@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Sound;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public interface IDamageable
 {
@@ -31,7 +34,10 @@ public class Monster : MonoBehaviour, IDamageable
 
     [SerializeField ]private GameObject lootPrefab = default;
     [SerializeField ]private GameObject deathEffectPrefab = default;
+
+    public Action onDeath;
     
+
     void Start()
     {
         attackTimer = attackDelay;
@@ -120,12 +126,30 @@ public class Monster : MonoBehaviour, IDamageable
         {
             collider.enabled = false;
         }
+        SoundManager.PlaySound(SoundManager.Sound.MonsterDeath, transform.position);
 
-        if (deathEffectPrefab) { Instantiate(deathEffectPrefab, transform.position, Quaternion.identity); }
+        if (deathEffectPrefab)
+        {
+            GameObject deathEffect = Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(deathEffect,3f);
+        }
 
-        if (lootPrefab) { Instantiate(lootPrefab, transform.position, Quaternion.identity); }
+        if (lootPrefab)
+        {
+            Instantiate(lootPrefab, transform.position, Quaternion.identity);
+        }
 
+        if (onDeath != null)
+        {
+            onDeath.Invoke();
+        }
+        
         Destroy(this.gameObject);
+    }
+
+    private void Hide()
+    {
+        
     }
     
 }
