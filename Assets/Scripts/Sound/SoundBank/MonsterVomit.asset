@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f826fb6c7d5f94b8f100a275189cf5, type: 3}
+  m_Name: MonsterVomit
+  m_EditorClassIdentifier: 
+  soundBank:
+  - {fileID: 8300000, guid: 15e1875bf055e114ab9a4395d5e0e53b, type: 3}
+  - {fileID: 8300000, guid: df71d7ae60a7fe9449fe9329989dd0d8, type: 3}
+  - {fileID: 8300000, guid: a9e083f5cf42c2f4a873cc6fdbd625f6, type: 3}
+  - {fileID: 8300000, guid: 640f142ce6dff804a9a6067b224069bb, type: 3}
+  - {fileID: 8300000, guid: a432cd37b52546c4d815b8308a8cb45f, type: 3}
+  - {fileID: 8300000, guid: 8b7c5102cda873d43b497890d7234611, type: 3}
+  - {fileID: 8300000, guid: e493d12c0ece5d547b8561447bcfcce7, type: 3}
+  - {fileID: 8300000, guid: 9afe4b1777633c548990a0e3a8abaa51, type: 3}
+  - {fileID: 8300000, guid: 79d9c49f80b6e0e46838e955eab543ae, type: 3}

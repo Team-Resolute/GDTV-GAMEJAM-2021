@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c265399f-e8e2-4210-93cc-c648fd989f4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sandman Dialogue Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sandman Dialogue Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Monster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Illusia Testing Ground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Illusia Testing Ground.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/Resources/AudioAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/Resources/AudioAssets.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +50,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/StartMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundBank/SoundBank.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/Resources/AudioAssets.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DialogueEventOnTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Illusia.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MonsterProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Monster.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
   <component name="ProjectLevelVcsManager">
@@ -170,10 +182,10 @@
       <screen x="2622" y="14" width="1858" height="1080" />
     </state>
     <state x="2622" y="14" width="1874" height="1167" key="dock-window-1/-1304.323.1304.768/62.0.2498.1440/2622.14.1858.1080@62.0.2498.1440" timestamp="1622459663176" />
-    <state x="979" y="50" width="1119" height="1072" key="find.popup" timestamp="1622654633792">
+    <state x="979" y="50" width="1119" height="1072" key="find.popup" timestamp="1622656284701">
       <screen x="63" y="0" width="2497" height="1440" />
     </state>
     <state x="979" y="50" width="1119" height="1072" key="find.popup/-1302.323.1302.768/64.0.2496.1440/2622.14.1858.1080@64.0.2496.1440" timestamp="1622638368685" />
-    <state x="979" y="50" width="1119" height="1072" key="find.popup/-1303.323.1303.768/63.0.2497.1440/2622.14.1858.1080@63.0.2497.1440" timestamp="1622654633792" />
+    <state x="979" y="50" width="1119" height="1072" key="find.popup/-1303.323.1303.768/63.0.2497.1440/2622.14.1858.1080@63.0.2497.1440" timestamp="1622656284701" />
   </component>
 </project>

@@ -98,7 +98,7 @@ public class Monster : MonoBehaviour, IDamageable
             projectileLaunchForce = projectileLaunchForce + Random.Range(-variation, variation);
             projectilePool[i].GetComponent<Rigidbody>().velocity = projectileLaunchOrigin.forward * projectileLaunchForce;
 
-            SoundManager.PlaySound(SoundManager.Sound.MonsterProjectile, projectileLaunchOrigin.position);
+            SoundManager.PlaySound(SoundManager.Sound.MonsterProjectile, projectileLaunchOrigin.position, 0.3f);
 
             yield return new WaitForSeconds(0.2f);
         }
@@ -125,7 +125,7 @@ public class Monster : MonoBehaviour, IDamageable
         {
             collider.enabled = false;
         }
-        SoundManager.PlaySound(SoundManager.Sound.MonsterDeath, transform.position);
+        SoundManager.PlaySound(SoundManager.Sound.MonsterDeath, transform.position, 0.5f);
 
         if (deathEffectPrefab)
         {
