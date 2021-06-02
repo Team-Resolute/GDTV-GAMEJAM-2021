@@ -33,15 +33,18 @@ public class StartMenu : MonoBehaviour
         SoundManager.PlaySound(SoundManager.Sound.ButtonFail);
         startButton.interactable = false;
         dialogueManager.NewDialogue();
-        dialogueManager.AddDialogueSpeech(Speaker.Sandman, "Knock, knock.");
-        dialogueManager.AddDialogueSpeech(Speaker.Player, "Umm... who's there?");
+        dialogueManager.AddDialogueSpeech(Speaker.Player, "Hey, the game didn't start.");
+        dialogueManager.AddDialogueSpeech(Speaker.Sandman, "Are you so sure about that?");
         dialogueManager.StartDialogue();
+        Invoke(nameof(ActivateSleepometer), 3f);
+    }
 
-        // Instantiate and start Sleepometer
+    public void ActivateSleepometer()
+    {
         GameObject sleepometerInstance = Instantiate(sleepometer, new Vector3(0,0,0), Quaternion.identity);
         Sleepometer sleepometerScript = sleepometerInstance.GetComponentInChildren<Sleepometer>();
         sleepometerScript.maxTimer = 20;
-        sleepometerScript.StartTimer();
+        sleepometerScript.StartTimer();    
     }
 
     public void StartGame()
