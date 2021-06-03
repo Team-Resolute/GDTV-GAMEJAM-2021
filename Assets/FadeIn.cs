@@ -21,7 +21,7 @@ public class FadeIn : MonoBehaviour
     }
     void Update()
     {
-        if (a <= 0) { return;}  
+        if (a <= endAlpha) { meshRendererToFade.gameObject.SetActive(false);}  
         
         if (a > endAlpha && totalFadeTime > 0f)
         {
@@ -32,6 +32,7 @@ public class FadeIn : MonoBehaviour
             Color color = meshRendererToFade.material.color;
             color.a = Mathf.Clamp01(a);
             meshRendererToFade.material.color = color;
+            if (a <= endAlpha) { meshRendererToFade.gameObject.SetActive(false);}  
         }
     }
 }

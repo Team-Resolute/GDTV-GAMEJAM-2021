@@ -9,7 +9,7 @@ public enum Level {StartMenu, Transition, Illusia, Tempus, Umbra, GameOver}
 
 public class LevelChanger : MonoBehaviour
 {
-    private LevelChanger Instance = null;
+    public static LevelChanger Instance = null;
     
     void Awake()
     {
