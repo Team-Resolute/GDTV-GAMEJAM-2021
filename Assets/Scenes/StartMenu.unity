@@ -884,14 +884,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Team lead and Design by Anthony Juarez\nProgramming by Anthony Juarez
-    and MortyDice\n3D Modeling and Animation by Darkstar-Phillip\nMusic by Janne
-    Seppanen / Skyhammer Sound\nSound Effects by Yohan\nProject Management by MortyDice
-    and Anthony Juarez\n\n\nSpecial Thanks To: \n* Andrea, Lertos, TinyWizard, and
-    Bigo for early enthusiastic support and brainstorming assistant in early project
-    stages\n* Yang Pulse, Lucy Becker, and everyone involved in hosting the GameDev.tv
-    2021 Game Jam on itch.io\n\nFor more information regarding online game development
-    courses provided by GameDev.tv, please visit http://www.gamedev.tv'
+  m_text: 'Design by Anthony Juarez\nProgramming by Anthony Juarez and MortyDice\n3D
+    Modeling and Animation by Darkstar-Phillip\nMusic by Janne Seppanen / Skyhammer
+    Sound\nSound Effects by Yohan\nProject Management by MortyDice and Anthony Juarez\n\n\nSpecial
+    Thanks To: \n* Andrea, Lertos, TinyWizard, and Bigo for early enthusiastic support
+    and brainstorming assistance in early project stages\n* Yang Pulse, Lucy Becker,
+    and everyone involved in hosting the GameDev.tv 2021 Game Jam on itch.io\n\nFor
+    more information regarding online game development courses provided by GameDev.tv,
+    please visit http://www.gamedev.tv'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
