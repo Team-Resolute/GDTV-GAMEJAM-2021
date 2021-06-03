@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c265399f-e8e2-4210-93cc-c648fd989f4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDTV-GAMEJAM-2021/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Minorcharacter Dialogue Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Minorcharacter Dialogue Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sandman Dialogue Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sandman Dialogue Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/Resources/AudioAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/Resources/AudioAssets.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EndMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EndMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Win.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Win.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +59,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/LevelChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MonsterProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/EndMenu.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
   <component name="ProjectLevelVcsManager">
