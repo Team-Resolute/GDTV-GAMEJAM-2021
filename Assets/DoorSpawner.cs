@@ -16,6 +16,8 @@ public class DoorSpawner : MonoBehaviour
     [SerializeField] GameObject Percent20Dialogue = default;
     [SerializeField] GameObject Percent40Dialogue = default;
     [SerializeField] GameObject Percent80Dialogue = default;
+
+    [SerializeField] private GameObject shiftTriggerPrefab = default; 
     private void Start()
     {
         monster.onDeath += BeginSpawnDoorSequence;
@@ -30,8 +32,14 @@ public class DoorSpawner : MonoBehaviour
     {
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
         Vector3 spawnPos = ChooseSpawnLocation(player);
-        SpawnDialogue(player, spawnPos);
-        SpawnDoor(spawnPos);
+        Vector3 groundSpawnPos = spawnPos;
+        spawnPos = spawnPos + Vector3.up + Vector3.up;
+        Vector3 playerPos = player.position + Vector3.up + Vector3.up;
+        Vector3 vectToPlayer = playerPos - spawnPos;
+        
+        SpawnDialogue(spawnPos, vectToPlayer);
+        SpawnDreamShiftTrigger(spawnPos, vectToPlayer);
+        SpawnDoor(groundSpawnPos);
         Destroy(gameObject,1f);
     }
 
@@ -49,16 +57,14 @@ public class DoorSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnDialogue(Transform player, Vector3 doorSpawnPos)
+    private void SpawnDialogue(Vector3 doorSpawnPos, Vector3 vectToPlayer)
     {
         Percent20Dialogue.SetActive(true);
         Percent40Dialogue.SetActive(true);
         Percent80Dialogue.SetActive(true);
-        doorSpawnPos = doorSpawnPos + Vector3.up + Vector3.up;
-        Vector3 playerPos = player.position + Vector3.up + Vector3.up;
-        Vector3 vectToPlayer = playerPos - doorSpawnPos;
-        Percent20Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.2f);
-        Percent40Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.4f);
+        
+        Percent20Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.4f);
+        Percent40Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.65f);
         Percent80Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.8f);
     }
 
@@ -66,6 +72,14 @@ public class DoorSpawner : MonoBehaviour
     {
         Instantiate(DoorPrefab, spawnPos, Quaternion.identity);
         SoundManager.PlaySound(SoundManager.Sound.DoorAppearing);
+    }
+
+    private void SpawnDreamShiftTrigger(Vector3 spawnPos, Vector3 vectToPlayer)
+    {
+        spawnPos = spawnPos + (vectToPlayer * 0.15f);
+        GameObject shiftTrigger = Instantiate(shiftTriggerPrefab, spawnPos, Quaternion.identity);
+        shiftTrigger.SetActive(true);
+        
     }
     
     

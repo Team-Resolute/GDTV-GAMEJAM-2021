@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,25 @@ public class SceneShifter : MonoBehaviour
     [SerializeField] private AudioSource musicPlayer = default;
     private GameObject currentShift = default;
     private GameObject currentLight = default;
+
+    //[SerializeField] private List<Collider> shiftColliders = new List<Collider>();
+
+    public static SceneShifter Instance = null;
     
-    int shiftNumber = 0;
-    
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+        }
+    }
+
     void Start()
     {
         if (shifts.Count > 0)
@@ -27,7 +44,6 @@ public class SceneShifter : MonoBehaviour
 
             currentShift = shifts[0];
             currentShift.SetActive(true);
-            shiftNumber++;
         }
 
         if (musicPlayer && shiftedAudio.Count > 0)
@@ -44,15 +60,7 @@ public class SceneShifter : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        if (Debug.isDebugBuild && Input.GetKeyDown(KeyCode.Comma))
-        {
-            Shift();
-        }
-    }
-
-    public void Shift()
+    public void Shift(int shiftNumber)
     {
         if (shiftNumber < shifts.Count)
         {
@@ -74,9 +82,7 @@ public class SceneShifter : MonoBehaviour
             currentLight = shiftedLight[shiftNumber];
             currentLight.SetActive(true);
         }
-        
-        shiftNumber++;
-
     }
+
     
 }
