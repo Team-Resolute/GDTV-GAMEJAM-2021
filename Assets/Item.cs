@@ -20,11 +20,13 @@ public class Item : MonoBehaviour, IInteractable
         if (DialogueEventOccuredOnAcquire && !DialogueEventOccuredOnReload)
         {
             DialogueEventOnSecondReload.gameObject.SetActive(true);
+            DialogueEventOccuredOnReload = true;
         }
         
         if (!DialogueEventOccuredOnAcquire)
         {
             DialogueEventOnFirstReload.gameObject.SetActive(true);
+            DialogueEventOccuredOnAcquire = true;
         }
     }
     

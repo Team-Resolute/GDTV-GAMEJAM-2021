@@ -5036,6 +5036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd64b1d25dbe6ed419726f3dd6385234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster: {fileID: 0}
 --- !u!1 &9163605251325229287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,6 +5427,10 @@ PrefabInstance:
     - target: {fileID: 1884230772036739926, guid: e888952a6e1986844965302a27edf143, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750465537295331448, guid: e888952a6e1986844965302a27edf143, type: 3}
+      propertyPath: interactionTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9172944906381951335, guid: e888952a6e1986844965302a27edf143, type: 3}
       propertyPath: m_Name

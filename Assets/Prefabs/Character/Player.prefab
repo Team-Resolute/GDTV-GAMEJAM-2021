@@ -382,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 5525219402838321709}
   moveSpeed: 15
-  jumpForce: 18
+  jumpForce: 19
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

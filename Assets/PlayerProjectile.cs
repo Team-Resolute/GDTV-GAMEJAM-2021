@@ -13,8 +13,8 @@ public class PlayerProjectile : MonoBehaviour
     }
     private void Update()
     {
-        transform.Rotate(0f,0f,200f);
-        transform.LookAt(transform.position + rb.velocity);
+       //transform.Rotate(0f,0f,200f);
+       transform.LookAt(transform.position + rb.velocity);
     }
 
     private void OnCollisionEnter(Collision other)

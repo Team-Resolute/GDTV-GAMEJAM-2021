@@ -11,7 +11,7 @@ public class Combat : MonoBehaviour
 {
     [SerializeField] private int ammo;
     private int maxAmmo = 10;
-    private float baseShootingForce = 20;
+    private float baseShootingForce = 24;
     [SerializeField] private GameObject projectilePrefab;
     private List<Rigidbody> projectilePool = new List<Rigidbody>();
 
@@ -63,14 +63,13 @@ public class Combat : MonoBehaviour
                 projectileNum = 1;
             }
             shootingTimer = 0f;
-            float variation = baseShootingForce * 0.4f;
+            float variation = baseShootingForce * 0.20f;
             float shootingForce = baseShootingForce + Random.Range(-variation, variation);
 
             Rigidbody projectile = projectilePool[projectileNum-1];
             projectile.gameObject.SetActive(true);
             GameObject player = GameObject.Find("Player(Clone)"); //This will cause errors if the player object change and its not a good solution
             SoundManager.PlaySound(SoundManager.Sound.PlayerShooting, player.transform.position, 0.2f);
-            Debug.Log("Player Shooting");
             projectile.transform.position = firePoint.position;
             projectile.transform.forward = firePoint.forward;
             projectile.velocity = firePoint.forward * shootingForce;
