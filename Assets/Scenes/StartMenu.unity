@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -884,9 +884,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Design by Anthony Juarez\nProgramming by Anthony Juarez and @MortyDice
-    (twitter)\n3D Modeling and Animation by Darkstar-Phillip\nMusic by Janne Seppanen
-    / Skyjammer Sound\nSound Effects by Yohan\nProjeject Management by @MortyDice
+  m_text: 'Team lead and Design by Anthony Juarez\nProgramming by Anthony Juarez
+    and MortyDice\n3D Modeling and Animation by Darkstar-Phillip\nMusic by Janne
+    Seppanen / Skyhammer Sound\nSound Effects by Yohan\nProject Management by MortyDice
     and Anthony Juarez\n\n\nSpecial Thanks To: \n* Andrea, Lertos, TinyWizard, and
     Bigo for early enthusiastic support and brainstorming assistant in early project
     stages\n* Yang Pulse, Lucy Becker, and everyone involved in hosting the GameDev.tv
@@ -1399,7 +1399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &854152918
 RectTransform:
   m_ObjectHideFlags: 0
