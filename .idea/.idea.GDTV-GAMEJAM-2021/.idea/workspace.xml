@@ -33,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/InitializeSound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundBank/SoundBank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/PlsyerInteraction.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -42,6 +43,8 @@
       <option value="$PROJECT_DIR$/Assets/Transition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Combat/MonsterProjectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/PlsyerInteraction.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Combat.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -137,7 +140,7 @@
       <workItem from="1622684509850" duration="6756000" />
       <workItem from="1622702002658" duration="2977000" />
       <workItem from="1622777742075" duration="3477000" />
-      <workItem from="1622783312354" duration="1350000" />
+      <workItem from="1622783312354" duration="3261000" />
     </task>
     <servers />
   </component>

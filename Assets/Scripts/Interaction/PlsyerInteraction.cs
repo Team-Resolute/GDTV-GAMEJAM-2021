@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 using Sound;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +35,7 @@ public class PlsyerInteraction : MonoBehaviour
             ProcessTimer();
             return;
         }
-        
+
         if (!interacting && Input.GetButtonDown("Fire1"))
         {
             Collider[] potentialTargets = Physics.OverlapSphere(transform.position, maxRange, interactionLayer, QueryTriggerInteraction.Collide);
@@ -52,10 +54,23 @@ public class PlsyerInteraction : MonoBehaviour
                 target = targetsNearby[Random.Range(0, targetsNearby.Count - 1)];
                 if (target != null && target.IsInteractable())
                 {
+                    interacting = true;
                     InteractStart();
                 }
             }
         }
+    }
+
+    public bool IsInteractableObjectNear()
+    {
+        bool interactableNearby = false;
+        Collider[] potentialTargets = Physics.OverlapSphere(transform.position, maxRange, interactionLayer, QueryTriggerInteraction.Collide);
+        if (potentialTargets.Length > 0)
+        {
+            interactableNearby = true;
+        }
+
+        return interactableNearby;
     }
 
     void InteractStart()
@@ -110,5 +125,10 @@ public class PlsyerInteraction : MonoBehaviour
 
         target.Interact(this.gameObject);
         target = null;
+    }
+
+    public bool IsPlayerInteracting()
+    {
+        return interacting;
     }
 }

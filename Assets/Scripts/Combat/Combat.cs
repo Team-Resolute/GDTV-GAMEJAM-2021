@@ -24,6 +24,8 @@ public class Combat : MonoBehaviour
     private const float maxShootingTimer = 1f;
     private float shootingTimer = 0f;
 
+    private PlsyerInteraction playerInteraction = default;
+    
     [SerializeField] private DialogueEventOnTimer needMoreAmmo;
 
     private void Start()
@@ -52,6 +54,19 @@ public class Combat : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && ammo > 0 && shootingTimer > maxShootingTimer - 0.1f)
         {
+            if (!playerInteraction)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (!player) { return; }
+
+                playerInteraction = player.GetComponent<PlsyerInteraction>();
+                if (!playerInteraction) { return; }
+            }
+
+            if (playerInteraction.isActiveAndEnabled && playerInteraction.IsPlayerInteracting()) { return;}
+
+            if (playerInteraction.isActiveAndEnabled && playerInteraction.IsInteractableObjectNear()) { return;}
+                
             if (!firePoint)
             {
                 firePoint = GameObject.FindGameObjectWithTag("FirePoint").transform;
@@ -68,8 +83,7 @@ public class Combat : MonoBehaviour
 
             Rigidbody projectile = projectilePool[projectileNum-1];
             projectile.gameObject.SetActive(true);
-            GameObject player = GameObject.Find("Player(Clone)"); //This will cause errors if the player object change and its not a good solution
-            SoundManager.PlaySound(SoundManager.Sound.PlayerShooting, player.transform.position, 0.2f);
+            SoundManager.PlaySound(SoundManager.Sound.PlayerShooting, playerInteraction.transform.position, 0.2f);
             projectile.transform.position = firePoint.position;
             projectile.transform.forward = firePoint.forward;
             projectile.velocity = firePoint.forward * shootingForce;
