@@ -30891,9 +30891,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f21a8dfa7ba634298063015e457799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakers: 03000000
+  speakers: 030000000100000002000000
   speeches:
   - Please, open your eyes.
+  - What is that voice in the distance?
+  - Just the wind.
 --- !u!65 &1035859456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36028,7 +36030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers: 03000000010000000200000004000000
   speeches:
-  - I love you so much.
+  - Come back to me, child.
   - Mother...?
   - Don't go that way. Stay here and be a hero!
   - Save us!  Save us!
@@ -41760,12 +41762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f21a8dfa7ba634298063015e457799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakers: 0300000001000000020000000100000002000000
+  speakers: 030000000100000002000000
   speeches:
   - The Sandman lies, child.
-  - What is that voice in the distance?
-  - 'Just the wind. '
-  - It sounds so distant. So sad.
+  - 'That voice. She sounds so sad. '
   - Don't listen to strange voices.
 --- !u!1001 &1411451205
 PrefabInstance:
@@ -58776,7 +58776,7 @@ MonoBehaviour:
   speakers: 0100000002000000
   speeches:
   - What is this place?
-  - A place where dreams come true.
+  - A place where all your wishes come true.
 --- !u!4 &1987485859
 Transform:
   m_ObjectHideFlags: 0
