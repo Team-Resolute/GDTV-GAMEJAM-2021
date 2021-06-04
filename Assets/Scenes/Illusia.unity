@@ -30441,7 +30441,6 @@ MonoBehaviour:
   Percent20Dialogue: {fileID: 140214876}
   Percent40Dialogue: {fileID: 742030860}
   Percent80Dialogue: {fileID: 1187257554}
-  shiftTriggerPrefab: {fileID: 4691877139300560210, guid: c4c4eedfdd302554188ff9cedf5ef003, type: 3}
 --- !u!4 &1029114787
 Transform:
   m_ObjectHideFlags: 0

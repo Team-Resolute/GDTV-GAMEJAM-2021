@@ -17,7 +17,7 @@ public class DoorSpawner : MonoBehaviour
     [SerializeField] GameObject Percent40Dialogue = default;
     [SerializeField] GameObject Percent80Dialogue = default;
 
-    [SerializeField] private GameObject shiftTriggerPrefab = default; 
+    //[SerializeField] private GameObject shiftTriggerPrefab = default; 
     private void Start()
     {
         monster.onDeath += BeginSpawnDoorSequence;
@@ -38,7 +38,7 @@ public class DoorSpawner : MonoBehaviour
         Vector3 vectToPlayer = playerPos - spawnPos;
         
         SpawnDialogue(spawnPos, vectToPlayer);
-        SpawnDreamShiftTrigger(spawnPos, vectToPlayer);
+        //SpawnDreamShiftTrigger(spawnPos, vectToPlayer);
         SpawnDoor(groundSpawnPos);
         Destroy(gameObject,1f);
     }
@@ -74,13 +74,13 @@ public class DoorSpawner : MonoBehaviour
         SoundManager.PlaySound(SoundManager.Sound.DoorAppearing);
     }
 
-    private void SpawnDreamShiftTrigger(Vector3 spawnPos, Vector3 vectToPlayer)
+    /*private void SpawnDreamShiftTrigger(Vector3 spawnPos, Vector3 vectToPlayer)
     {
         spawnPos = spawnPos + (vectToPlayer * 0.15f);
         GameObject shiftTrigger = Instantiate(shiftTriggerPrefab, spawnPos, Quaternion.identity);
         shiftTrigger.SetActive(true);
         
-    }
+    }*/
     
     
 }
