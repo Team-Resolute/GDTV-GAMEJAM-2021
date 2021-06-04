@@ -17555,7 +17555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers: 02000000040000000100000002000000
   speeches:
-  - Do you hear them?  The chior of voices calling out your name?
+  - Do you hear the people calling your name?
   - Warrior!  Warrior!  Warrior!
   - That's... not my name.
   - Close enough.
@@ -18670,7 +18670,7 @@ MonoBehaviour:
   speeches:
   - What is that down there?
   - A specter, a shade. Nightmare made flesh.
-  - There is a prophecy about it's defeat...
+  - There is this prophecy...
   - The chosen one has come to save us!
 --- !u!65 &624803741
 BoxCollider:
@@ -21465,8 +21465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers: 020000000400000002000000
   speeches:
-  - Everyone here loves you!
-  - 'We love you!  We love you! '
+  - Everyone here adores you!
+  - 'We adore you!  We adore you! '
   - A champion can't abandon his realm.
 --- !u!65 &742030863
 BoxCollider:
@@ -35862,7 +35862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers: 03000000010000000200000004000000
   speeches:
-  - Please wake up.
+  - I love you so much.
   - Mother...?
   - Don't go that way. Stay here and be a hero!
   - Save us!  Save us!
@@ -47147,10 +47147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f21a8dfa7ba634298063015e457799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakers: 0200000002000000
+  speakers: 02000000
   speeches:
   - You can defeat this monster. Only you.
-  - This is what you've always wanted.
 --- !u!65 &1574699983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56026,7 +56025,7 @@ MonoBehaviour:
   timeUntilStart: 1
   speakers: 02000000
   speeches:
-  - Run back to get more ammo!
+  - Get more ammo!
 --- !u!4 &1902793769
 Transform:
   m_ObjectHideFlags: 0
