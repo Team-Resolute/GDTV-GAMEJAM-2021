@@ -45,8 +45,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Combat/MonsterProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/PlsyerInteraction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Combat.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Endgame/DoorSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Combat/PlayerController/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Endgame/DoorSpawner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -142,7 +142,8 @@
       <workItem from="1622684509850" duration="6756000" />
       <workItem from="1622702002658" duration="2977000" />
       <workItem from="1622777742075" duration="3477000" />
-      <workItem from="1622783312354" duration="5033000" />
+      <workItem from="1622783312354" duration="5233000" />
+      <workItem from="1622791820640" duration="44000" />
     </task>
     <servers />
   </component>

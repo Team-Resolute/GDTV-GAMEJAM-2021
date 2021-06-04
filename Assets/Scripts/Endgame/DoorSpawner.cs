@@ -63,8 +63,8 @@ public class DoorSpawner : MonoBehaviour
         Percent40Dialogue.SetActive(true);
         Percent80Dialogue.SetActive(true);
         
-        Percent20Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.4f);
-        Percent40Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.65f);
+        Percent20Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.25f);
+        Percent40Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.45f);
         Percent80Dialogue.transform.position = doorSpawnPos + (vectToPlayer * 0.8f);
     }
 
