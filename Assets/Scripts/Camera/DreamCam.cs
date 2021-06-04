@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,7 @@ public class DreamCam : MonoBehaviour
     
     private Vector3 focusOffset = default;
     private Vector3 desiredPos = default;
+    [SerializeField] private bool camVerticalLimits = false;
     
     private void Start()
     {
@@ -28,7 +30,7 @@ public class DreamCam : MonoBehaviour
     void LateUpdate()
     {
         desiredPos = focusPoint.position + focusOffset;
-        
+        if (camVerticalLimits) {desiredPos.y =  Mathf.Clamp(desiredPos.y, -3.9f, 3.8f);}        
         transform.position = Vector3.MoveTowards(transform.position, desiredPos, followSpeed * Time.deltaTime);
         if (isWobbling) {Wobble();}
         
@@ -49,6 +51,8 @@ public class DreamCam : MonoBehaviour
         focusOffset = transform.position - focusPoint.position;
         FocusPoint focusBehavior = focusPoint.gameObject.GetComponent<FocusPoint>();
         if (focusBehavior) {focusBehavior.FocusOnPlayer();}
-        transform.position = focusPoint.position + focusOffset;
+        Vector3 newCamPos = focusPoint.position + focusOffset;
+        if (camVerticalLimits) {newCamPos.y =  Mathf.Clamp(newCamPos.y, -4f, 9f);}
+        transform.position = newCamPos;
     }
 }

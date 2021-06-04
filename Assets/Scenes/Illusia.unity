@@ -43431,6 +43431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focusPoint: {fileID: 128090354}
   isWobbling: 0
+  camVerticalLimits: 1
 --- !u!114 &1454479632
 MonoBehaviour:
   m_ObjectHideFlags: 0
