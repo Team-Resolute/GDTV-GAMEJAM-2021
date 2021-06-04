@@ -11,7 +11,7 @@ public class Flicker : MonoBehaviour
     private Vector3 startPos;
     private Vector3 targetPoint;
     private Vector3 flickerVector;
-    private float timer = 0f;
+    
     
     void Start()
     {

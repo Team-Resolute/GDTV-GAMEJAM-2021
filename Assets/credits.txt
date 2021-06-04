@@ -1,0 +1,27 @@
+
+"Restless", by Team Resolute
+Created for the Gamedev.tv 2021 Game Jam
+
+Team Resolute: Anthony (Team Lead), Morty, Yohan, gtrwll, Darkstar-Phillip
+
+Design by Anthony Juarez
+
+Programming by Anthony Juarez and MortyDice
+
+3D Modeling and Animation by Darkstar-Phillip
+
+Music by Janne Seppanen / Skyhammer Sound
+
+Sound Effects by Yohan
+
+Project Management by MortyDice and Anthony Juarez
+
+
+
+
+Special Thanks To: 
+* Andrea, Lertos, TinyWizard, and Bigo for early enthusiastic support and brainstorming assistance in early project stages
+* Yang Pulse, Lucy Becker, and everyone involved in hosting the GameDev.tv 2021 Game Jam on itch.io
+
+For more information regarding online game development courses provided by GameDev.tv, please visit http://www.gamedev.tv
+Game music packs available from Skyhammer Sound at itch.io: https://skyhammersound.itch.io/
