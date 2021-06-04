@@ -793,6 +793,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7633284363897948952, guid: 496038b833dca844ea582e288a04640b, type: 3}
   m_PrefabInstance: {fileID: 24939843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &887072074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6387253151133313683, guid: 01268cc023316004bbae6eb6d3b70257, type: 3}
+  m_PrefabInstance: {fileID: 6387253150440009472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049385829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1474,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1992710116}
     m_Modifications:
+    - target: {fileID: 6387253150529314617, guid: 01268cc023316004bbae6eb6d3b70257, type: 3}
+      propertyPath: buttonHider
+      value: 
+      objectReference: {fileID: 887072074}
     - target: {fileID: 6387253150855239646, guid: 01268cc023316004bbae6eb6d3b70257, type: 3}
       propertyPath: m_Name
       value: EndGame Buttons

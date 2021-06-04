@@ -49,7 +49,7 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SoundManager.PlaySound(SoundManager.Sound.ClickButton);
+        //SoundManager.PlaySound(SoundManager.Sound.ClickButton);
         levelChanger.ChangeScene(firstLevel);
     }
     
