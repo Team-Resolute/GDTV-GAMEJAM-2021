@@ -41,6 +41,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Setup/LevelChanger.cs" />
       <option value="$PROJECT_DIR$/Assets/Transition.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Combat/MonsterProjectile.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1svETxLRig8WtftRSW6vlIKBIDv" />
@@ -136,7 +137,7 @@
       <workItem from="1622684509850" duration="6756000" />
       <workItem from="1622702002658" duration="2977000" />
       <workItem from="1622777742075" duration="3477000" />
-      <workItem from="1622783312354" duration="919000" />
+      <workItem from="1622783312354" duration="1350000" />
     </task>
     <servers />
   </component>

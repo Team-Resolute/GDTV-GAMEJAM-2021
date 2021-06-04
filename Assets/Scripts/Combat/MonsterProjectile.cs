@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MonsterProjectile : MonoBehaviour
 {
-    private const float damage = 2f;
+    private const float damage = 5f;
     private void OnCollisionEnter (Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
