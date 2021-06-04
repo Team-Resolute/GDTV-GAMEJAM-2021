@@ -134,12 +134,14 @@ public class PlayerController : MonoBehaviour
         if (movement > 0) { direction = 1;}
         if (movement < 0) { direction = -1;}
 
-        transform.rotation = Quaternion.identity;
+        //transform.rotation = Quaternion.identity;
         Vector3 rot = transform.rotation.eulerAngles;
+        rot.x = 0;
+        rot.y = 0;
         rot.z = 0;
-        transform.rotation = Quaternion.Euler(rot);
+        //transform.rotation = Quaternion.Euler(rot);
 
-        if (direction == -1) { rot.y = 180f; }
+        if (direction == -1) { rot.y = 180f * Mathf.Deg2Rad; }
         if (direction == 1) { rot.y = 0f; }
 
         transform.rotation = quaternion.Euler(rot.x, rot.y, rot.z);
