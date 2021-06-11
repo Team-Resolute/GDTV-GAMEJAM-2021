@@ -57,22 +57,23 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ShowDialogue()
     {
+        Time.timeScale = 0.2f;
         for (int i = 0; i < dialogue.Count; i++)
         {
             if (i<dialogue.Count-1) {defaultBackboard.gameObject.SetActive(true);}
-            Time.timeScale = 0f;
+            
             DialogueSnippet currentSnippet = dialogue[i];
             DialogueBox dialogueBox = DetermineDialogueBox(currentSnippet);
             dialogueBox.Show(currentSnippet);
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
             yield return new WaitForSecondsRealtime(dialogueDisplayTime);
-            Time.timeScale = 1f;
+            
             if (i>=dialogue.Count-1) {defaultBackboard.gameObject.SetActive(false);}
             dialogueBox.Hide();
             yield return new WaitUntil(() => dialogueBox.isOperationDone());
             dialogueBox.Hide();
         }
-
+        Time.timeScale = 1f;
         dialogueInProgress = false;
     }
 
